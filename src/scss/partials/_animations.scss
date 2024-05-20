@@ -1,0 +1,109 @@
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-60px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+}
+
+.slide-in-bottom {
+  -webkit-animation: fadeInUp .5s cubic-bezier(.25, .46, .45, .94) both;
+  animation: fadeInUp .5s cubic-bezier(.25, .46, .45, .94) both
+}
+
+.slide-in-right {
+  -webkit-animation: slide-in-right 1.2s cubic-bezier(.25, .46, .45, .94) both;
+  animation: slide-in-right 1.2s cubic-bezier(.25, .46, .45, .94) both
+}
+
+.slide-in-left {
+  -webkit-animation: slide-in-left .5s cubic-bezier(.25, .46, .45, .94) both;
+  animation: slide-in-left .5s cubic-bezier(.25, .46, .45, .94) both
+}
