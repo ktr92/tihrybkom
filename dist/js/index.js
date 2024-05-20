@@ -1,30 +1,22 @@
 
 function initFE() {
-  /*   cardImagesSlider() */
-  mainSliderInit()
-  videoSliderInit()
-  blogSliderInit()
-  productSliderInit()
-  videoPopup()
-  dropdownInit()
-/*   menuInit() */
-  quantityForm()
-   detailsliderInit()
-   gallerySliderInit()
-   hideText()
-  /*  imgSliderInit()
-  recipeSliderInit() */
-  /*  mobileAccordeon() */
-  closeByOutsideSelect()
-  // closeByClickOutside(".catalogpage__aside", ".js-mobilefilter")
-  closeByClickOutside("[data-dropdown]", "[data-dropdownclick]")
-  /*     fixElement(false, 750, 'mobpriceFixed', 'fixed')
-    fixElement(300, false, 'headermain', 'fixed')
-    fixElement(300, false, 'headercontainer', 'fixed')
-    fixElement(false, 0, 'mobilenav', 'fixed') */
-  /*  blockSliderInit()
-  productListImgLisder()
-  moreNewsSliderInit() */
+  progressSliderInit();
+};
+
+function progressSliderInit() {
+  const slider = new Myslider("[data-myslider-container='slider_aboutblock']", {
+    height: 711,
+    responsive: [
+      {
+        width: 992,
+        slides: 2
+      },
+      {
+        width: 480,
+        slides: 1
+      }
+    ]
+  });
 }
 
 function dropdownInit() {
@@ -42,81 +34,7 @@ function dropdownInit() {
     // $(`[data-toggleactive=${dropdown}]`).toggleClass("active")
   })
 }
-function menuInit() {
-  $("#dmenu").dmenu({
-    menu: {
-      align: "left",
-    },
-    item: {
-      bg: false,
-      border: false,
-      subindicator: true,
-
-      fit: [
-        {
-          items: null,
-          fitter: "icon-hide",
-          order: "all",
-        },
-        {
-          items: null,
-          fitter: "icon-only",
-          order: "all",
-        },
-        {
-          items: ":not(.dm-item_align-right)",
-          fitter: "submenu",
-          order: "rtl",
-        },
-        {
-          items: ":not(.dm-item_align-right)",
-          fitter: "hide",
-          order: "rtl",
-        },
-      ],
-    },
-    submenu: {
-      arrow: false,
-      border: false,
-      shadow: true,
-    },
-    subitem: {
-      bg: true,
-      border: false,
-    },
-  })
-}
 $(document).ready(function () {
-  /*  document.querySelectorAll('[data-toggle="password"]').forEach((item) => {
-    item.addEventListener("click", (event) => {
-      let inp = item.previousElementSibling
-      if (inp.type === "password") {
-        inp.type = "text"
-        console.log(item)
-        item.classList.add("active")
-      } else {
-        inp.type = "password"
-        item.classList.remove("active")
-      }
-    })
-  })
-
-  $(function () {
-    $("iframe[data-src]").each(function () {
-      $(this).Lazy()
-    })
-  })
-  $(".js-mobilefilter").on("click", function (e) {
-    e.preventDefault()
-    $(this).toggleClass("active")
-    $(".catalogpage__aside").toggleClass("active")
-  }) */
-
-  /*  $('.headermain__contacts').on('click', function(e) {
-      e.preventDefault()
-      $(this).toggleClass('active')
-      $('.contacts__dropdown').slideToggle()
-  }) */
 
   new WOW().init();
 
@@ -175,26 +93,6 @@ $(document).ready(function () {
       .find("span.stars-active")
       .css("width", $(this).find(".reviewsblock__value").text() * 24.4)
   })
-
-  /*  $(".productcard .cardrating").each(function () {
-    $(this)
-      .find("span.stars-active")
-      .css("width", $(this).find(".cardrating__value").text() * 11.2)
-  })
-  $(".detailinfo__reviews .cardrating").each(function () {
-    $(this)
-      .find("span.stars-active")
-      .css(
-        "width",
-        $(this).find(".cardrating__value").text() *
-          ($(this).find(".fa-star").width() + 2.1)
-      )
-  })
-  $(".reviews__rating .cardrating").each(function () {
-    $(this)
-      .find("span.stars-active")
-      .css("width", $(this).find(".cardrating__value").text() * 18)
-  }) */
 
     $("input[type=tel]").mask("7 (999) 999-99-99")
   

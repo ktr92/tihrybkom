@@ -522,6 +522,48 @@ button.close:hover {
   font-display: swap; }
 
 @font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe-ExtraBold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
   font-family: 'Helvetica Neue';
   src: url("../fonts/HelveticaNeueBlackCondensed.woff2") format("woff2");
   font-weight: 900;
@@ -585,6 +627,7 @@ button.close:hover {
   font-display: swap; }
 
 :root {
+  --font-family: 'Circe';
   --second-family: 'Helvetica Neue';
   --third-family: 'Klein'; }
 
@@ -597,12 +640,12 @@ body {
   margin: 0;
   list-style: none;
   scroll-behavior: smooth;
-  color: #25344f;
+  color: #282828;
   overflow-x: hidden;
-  width: 100%; }
+  width: 100%;
+  background: #f4f4f4; }
 
 * {
-  font-family: "Klein";
   font-style: normal;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -829,6 +872,238 @@ a.burgermenu {
 
 .headermain__burger {
   margin-left: 30px; }
+
+.categoryblocks {
+  margin-top: -40px;
+  position: relative; }
+
+.categoryblocks__items {
+  display: flex;
+  gap: 20px; }
+
+.categoryblocks__item {
+  width: 25%; }
+
+.categoryblock {
+  background: linear-gradient(180deg, #1e1e1e 0%, #2e2d2d 0.01%, #1e1e1e 100%); }
+
+.categoryblock__wrapper {
+  padding: 36px 20px 20px 36px;
+  height: 200px;
+  display: block;
+  position: relative;
+  background-image: url(../img//categoryblock_bg.jpg);
+  background-position: center;
+  background-size: cover; }
+
+.categoryblock__title {
+  padding-bottom: 18px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  z-index: 2; }
+  .categoryblock__title:after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: #AB3541;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+
+.categoryblock__image {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 41px;
+  z-index: 1; }
+
+.red {
+  color: #AB3541; }
+
+.aboutblock {
+  padding-top: calc(86px + 40px); }
+
+.aboutblock__wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 711px; }
+
+.aboutblock__main {
+  min-width: 609px;
+  max-width: 609px;
+  margin-right: 66px; }
+
+.aboutblock__title {
+  margin-bottom: 44px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #282828; }
+
+.aboutblock__text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(40, 40, 40, 0.7);
+  margin-bottom: 66px; }
+  .aboutblock__text p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 150%; }
+
+.aboutblock__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.navslider__progress {
+  width: 129px; }
+
+.btn_border {
+  display: inline-block;
+  padding: 15px 35px;
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #282828;
+  position: relative;
+  border: 2px solid transparent; }
+
+.btn_border::before, .btn_border::after, .btn_border span::before, .btn_border span::after {
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  position: absolute; }
+
+.btn_border::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #AB3541;
+  border-left: 2px solid #AB3541; }
+
+.btn_border::after {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid #AB3541;
+  border-right: 2px solid #AB3541; }
+
+.btn_border span::before {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid #AB3541;
+  border-left: 2px solid #AB3541; }
+
+.btn_border span::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #AB3541;
+  border-right: 2px solid #AB3541; }
+
+.btn_border:hover {
+  border-color: #AB3541;
+  background: #AB3541;
+  color: #fff; }
+
+[data-myslider-container] {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+[data-myslider-slider] {
+  display: flex;
+  position: relative;
+  transition: left 0.5s;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  left: 0; }
+
+[data-myslider-prev], [data-myslider-next] {
+  cursor: pointer; }
+
+.aboutblock {
+  padding-bottom: 115px; }
+
+.aboutblock__wrapper {
+  position: relative; }
+
+.aboutblock__slider {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.aboutblock__sliderblock {
+  position: relative;
+  min-height: 711px;
+  width: 100%; }
+
+.myslider__arrow {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0.7;
+  text-align: center;
+  line-height: 56px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99; }
+
+.myslider__left {
+  left: 20px; }
+
+.myslider__right {
+  right: 20px; }
+
+.myslider__left img {
+  transform: rotate(180deg); }
+
+.slider_barline {
+  width: 100%;
+  background: #d9d9d9;
+  height: 2px;
+  display: block; }
+
+.slider_barline span {
+  width: 20%;
+  background: #AB3541;
+  display: block;
+  height: 100%; }
+
+.slider__numb {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 12px; }
+
+.slider_barcurrent {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #282828;
+  opacity: 0.9; }
+
+.slider_bartotal {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #d9d9d9; }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
