@@ -26,12 +26,13 @@ function initFE() {
   productSlider();
   progressSliderInit();
   brandSliderInit();
+  newsSliderInit();
 };
 
 function brandSliderInit() {
-
   const slider = new Myslider("[data-myslider-container='slider_brands']", {
     slidesize: 466,
+    gap: 40,
     responsive: [
       {
         width: 480,
@@ -39,6 +40,24 @@ function brandSliderInit() {
       }
     ]
   })
+
+
+
+}
+function newsSliderInit() {
+  const slider = new Myslider("[data-myslider-container='slider_news']", {
+    slidesize: 742,
+    gap: 19,
+    responsive: [
+      {
+        width: 480,
+        slidesize: 236
+      }
+    ]
+  })
+
+  console.log(slider)
+
 
 }
 function productSlider() {

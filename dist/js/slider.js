@@ -24,9 +24,10 @@ class Myslider {
     this.isFixed = !!settings.slidesize
     this.slides = this.$slider.querySelectorAll(`[data-myslider-slide='${this.sliderID}']`)
     this.slidesCount =  this.slides.length
-    this.sectionCount = Math.ceil(this.slidesCount / this.slidesVisible)
+    this.sectionCount = this.slidesCount ? Math.ceil(this.slidesCount / this.slidesVisible) : 1
     this.position = this.$slider.style.left
     this.responsive = settings.responsive ?? null
+    this.gap = settings.gap ?? 0
     this.sliderInit()
   }
 
@@ -35,11 +36,11 @@ class Myslider {
   }
 
   sliderInit() {
+    this.sizeInit()
+    window.addEventListener('resize', () => {
+      this.activateSlide(0)
       this.sizeInit()
-      window.addEventListener('resize', () => {
-        this.activateSlide(0)
-        this.sizeInit()
-      })
+    })
     
     if (this.$next && this.$prev) {
       this.arrowsInit()
@@ -51,8 +52,8 @@ class Myslider {
       this.responsive.unshift({width: this.screen, slides: this.settings.slides ?? 1})
     }
     this.initSwipe()
-
-    
+    this.activateSlide(0)
+ 
   }
 
   arrowsInit() {
@@ -89,7 +90,7 @@ class Myslider {
 
   sizeInit() {
     let index = 0
-    
+
       if (this.responsive && this.responsive.length) {
         this.responsive.forEach((size, index) => {
           if (size.width > window.innerWidth) {
@@ -101,8 +102,7 @@ class Myslider {
       
       if (!this.isFixed) {
         this.slideWIdth = this.$el.offsetWidth / this.slidesVisible
-
-      }
+      } 
       
       this.$slider.style.width = `${this.slideWIdth * this.slidesCount}px`
       this.slides.forEach($slide => {
@@ -153,12 +153,12 @@ class Myslider {
 
   activateSlide(n) {
       if (n < 0) {
-        this.position = this.slideWIdth * (this.slidesCount - this.slidesVisible)
+        this.position = (this.slideWIdth + this.gap) * (this.slidesCount - this.slidesVisible)
         this.$slider.style.left = -this.position + 'px'
         this.activeId = this.slidesCount - this.slidesVisible
        } else {
         if (n < this.slidesCount - (this.slidesVisible - 1)) {
-          this.position = this.slideWIdth * n
+          this.position = (this.slideWIdth + this.gap) * n
           this.$slider.style.left = -this.position + 'px'
           this.activeId = n
          } else {
