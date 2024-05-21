@@ -742,3 +742,582 @@ line-height: 100%;
 text-transform: uppercase;
 color: #d9d9d9;
 }
+
+.videoblock {
+  background-image: url(../img/videoblock_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 66px 0 133px 0;
+}
+.videoblock__title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.videoblock__main {
+  display: flex;
+  justify-content: space-between;
+  min-height: 543px;
+}
+.videoblock__video {
+
+}
+.videoblock__content {
+  min-height: 100%;
+  max-width: 609px;
+  min-width: 609px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.videoblock__text {
+  font-family: var(--second-family);
+font-weight: 700;
+font-size: 32px;
+line-height: 100%;
+text-transform: uppercase;
+color: #fff;
+}
+.videoblock__stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.videoblock__stat {
+}
+.videoblock__statTitle {
+  font-family: var(--second-family);
+font-weight: 700;
+font-size: 42px;
+line-height: 100%;
+color: #fff;
+padding-bottom: 22px;
+position: relative;
+
+&:after {
+  width: 35px;
+  height: 3px;
+  background: $red;
+  content: "";
+  position: absolute;
+  left: 0;bottom: 0;
+}
+}
+.videoblock__statText {
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #fff;
+}
+
+.fitchesblock {
+  margin-bottom: 85px;
+  margin-top: -30px;
+}
+.fitchesblock__items {
+  display: flex;
+  gap: 21px;
+}
+.fitchesblock__item {
+  flex: 1;
+}
+.fitchescard {
+  padding: 35px 30px;
+  background-color: #fff;
+  background-image: url(../img/fitchescard_bg.svg);
+  background-position: right top 20px;
+  background-repeat: no-repeat;
+  min-height: 257px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+.fitchescard__icon {
+}
+.fitchescard__title {
+  font-family: var(--second-family);
+font-weight: 700;
+font-size: 26px;
+line-height: 100%;
+text-transform: uppercase;
+color: #282828;
+padding-bottom: 20px;
+position: relative;
+
+&:after {
+  content: "";
+  width: 35px;
+  height: 3px;
+  background: #ab3541;
+  position: absolute;
+  bottom: 0;left: 0;
+}
+}
+
+.quantity span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 10px;
+  img {
+    pointer-events: none;
+
+  }
+}
+
+
+input.quantity-field {
+  padding: 0;
+  max-width: 55px;
+  border: none;
+  background: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  /* identical to box height, or 55px */
+  height: 46px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #231f20;
+  -moz-appearance: textfield;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input.quantity-field::-webkit-outer-spin-button,
+input.quantity-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.quantity input[type="button"] {
+  text-align: center;
+  display: block;
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 1;
+  height: 24px;
+  padding: 0 2px;
+  color: #526272;
+  height: 24px;
+  line-height: 16px;
+  font-size: 16px;
+  padding: 0 4px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+input.quantity-plus {
+  position: relative;
+  top: 1px;
+}
+
+input.quantity-minus {
+  position: relative;
+  top: -1px;
+}
+
+.quantity {
+  border: 1.50px solid rgba(40, 40, 40, 0.1);
+
+  border-radius: 555px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.blocktitle {
+  margin-bottom: 60px;
+}
+
+
+h2 {
+  font-family: var(--second-family);
+font-weight: 700;
+font-size: 60px;
+line-height: 100%;
+text-transform: uppercase;
+color: #282828;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.catalogblock {
+  padding-bottom: 75px;
+}
+
+.cataloglist {
+}
+.blocktitle {
+}
+.cataloglist__items {
+  display: flex;
+  gap: 20px;
+}
+.cataloglist__item {
+  width: calc(100% / 3);
+}
+
+.quantity {
+  padding: 0 7px;
+}
+
+.productcard {
+}
+.productcard__wrapper {
+}
+.productcard__image {
+  margin-bottom: 22px;
+  a {
+    display: block;
+    position: relative;
+
+    @include imagecenter(69.655%);
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+.productcard__main {
+}
+.productcard__header {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+
+}
+.productcard__title {
+  a {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+color: #282828;
+  }
+}
+.productcard__icons {
+}
+.productcard__icon {
+}
+.productcard__prices {
+}
+.productcard__price {
+}
+.productcard__form {
+}
+.productcard__quantity {
+}
+.quantity {
+}
+.quantity-minus {
+}
+.quantity-field {
+}
+.quantity-plus {
+}
+.productcard__addcart {
+}
+.tocart__content {
+}
+.tocart__before {
+}
+.tocart__after {
+}
+
+.btn_cart, .btn_main {
+  display: inline-block;
+  width: fit-content;
+  align-items: center;
+  border-radius: 555px;
+  background: #ab3541;
+  height: 46px;
+  padding: 0 20px;
+  line-height: 46px;
+  border: none;
+  transition: $transition;
+  overflow: hidden;
+
+  &:hover {
+    background: $redhover;
+  }
+  &:focus {
+    background: $redfocus;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &.active {
+    background: #d04250;
+  }
+ 
+
+  span {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+
+  }
+}
+
+
+
+
+.tocart__content{
+  pointer-events: none;
+  padding-left: 36px;
+  display: flex;
+  height: 100%;
+  transition: all .3s ease-in-out;
+  align-items: center;
+  transition: all 0.3 linear;
+}
+
+.tocart__before {
+  background-image: url(../img/tocart.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.tocart__after {
+  background-image: url(../img/incart.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  transform: translateY(200%);
+}
+
+.active .tocart__before {
+  transform: translateY(-200%);
+}
+
+.active .tocart__after {
+  transform: translateY(-100%);
+}
+/* .btn_cart:focus .tocart__before {
+  transform: translateY(-200%);
+}
+
+.btn_cart:focus .tocart__after {
+  transform: translateY(-100%);
+} */
+
+.productcard__fromwrapper {
+  display: flex;
+  align-items: center;
+}
+
+.productcard__addcart {
+  margin-left: 8px;
+}
+
+
+.cataloglist__slider {
+  .cataloglist__item {
+    max-width: 547px;
+
+  }
+}
+.productcard__prices {
+  margin-bottom: 17px;
+}
+.productcard__price {
+  display: flex;
+  align-items: center;
+  font-family: var(--second-family);
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #282828;
+  .productcard__prices_new {
+    margin-right: 30px;
+    color: $red;
+  }
+  .productcard__prices_old {
+    position: relative;
+    color: #282828;
+    opacity: 0.3;
+
+    &:after {
+      content: url('data:image/svg+xml,<svg width="70" height="13" viewBox="0 0 70 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.9" d="M22.4133 6.3334C23.0676 6.22976 23.7219 6.12612 24.3686 6.02368C24.6121 5.98511 24.8538 5.93568 25.1049 5.89591C25.3923 5.83924 25.6848 5.81519 25.9695 5.6921C26.195 5.58952 26.4513 5.58236 26.6947 5.5438C27.5908 5.39072 28.4886 5.24851 29.3829 5.08456C29.5579 5.05684 29.7226 4.96391 29.9034 4.92412C30.1604 4.87228 30.4267 4.83009 30.6854 4.78912C33.7515 4.30344 36.8253 3.81657 39.8931 3.34176C41.5759 3.23122 43.2266 2.86946 44.8886 2.62848C46.5431 2.3887 48.1865 2.12839 49.8375 1.86687C51.5054 1.61381 53.1716 1.34989 54.8396 1.09683C55.0982 1.05586 55.3518 0.982274 55.6277 1.05C55.7089 1.07055 55.7891 1.03556 55.8728 1.0223C56.4756 0.937963 57.0843 0.841549 57.6888 0.768082C57.9492 0.737977 58.2096 0.707873 58.4769 0.721247C58.7763 0.740669 59.0679 0.661061 59.3663 0.62493C59.7426 0.587617 60.1127 0.462139 60.5002 0.545598C60.5172 0.554057 60.5307 0.540778 60.5459 0.538369C61.3548 0.376809 62.1923 0.44472 63.0046 0.3049C63.2025 0.273566 63.3909 0.232565 63.5967 0.300264C63.6457 0.314772 63.6973 0.295472 63.7429 0.288241C64.3616 0.15681 65.0013 0.256048 65.6158 0.147562C65.8593 0.108996 66.1082 0.203282 66.3576 0.152643C66.601 0.114078 66.8393 0.0429012 67.0959 0.135978C67.1543 0.16015 67.2269 0.12636 67.2971 0.126384C67.8729 0.0686068 68.45 0.166618 69.0309 0.141451C69.162 0.131833 69.294 0.177774 69.4227 0.20197C69.7518 0.261256 69.9193 0.58014 69.8215 0.996757C69.7806 1.18152 69.7286 1.34575 69.6708 1.52205C69.5239 1.92415 69.2606 2.13299 68.9344 2.24037C68.4976 2.38756 68.0497 2.51422 67.6239 2.68194C67.0816 2.90156 66.8005 2.80122 66.3229 2.29746C66.1999 2.16096 66.0921 2.02204 66.0746 1.81311C66.0668 1.71407 66.0125 1.66695 65.9406 1.65606C65.7266 1.63425 65.5108 1.60157 65.2978 1.63532C64.9706 1.68714 64.6511 1.73775 64.3084 1.69175C64.1967 1.67601 64.0784 1.71703 63.9626 1.72424C63.6168 1.75673 63.2813 1.85444 62.9259 1.77703C62.8768 1.76252 62.8252 1.78183 62.7796 1.78906C61.7971 1.88897 60.8139 2.03357 59.8228 2.07913C58.9798 2.12353 58.1515 2.31045 57.3143 2.34277C56.4999 2.37149 55.7045 2.51977 54.9115 2.63424C54.1261 2.7475 53.3425 2.87162 52.5588 2.99575C47.3032 3.83938 42.0476 4.683 36.792 5.52663C35.3172 5.91621 33.8029 6.0558 32.3075 6.31495C30.8274 6.5717 29.3292 6.76443 27.8594 7.08639C26.6465 7.35651 25.4189 7.48411 24.2129 7.7977C23.2165 8.05581 22.207 8.18228 21.202 8.38605C21.0211 8.42584 20.8623 8.50671 20.6832 8.55737C20.4127 8.62249 20.1312 8.66708 19.859 8.72134C19.4195 8.80211 18.9841 8.85993 18.5566 9.01678C18.2626 9.13021 17.9437 9.13614 17.6335 9.19642C17.2337 9.28203 16.8143 9.29276 16.4317 9.48707C16.3878 9.50517 16.3328 9.50274 16.2871 9.50997C15.1697 9.74268 14.0471 9.94278 12.9459 10.2286C12.1743 10.4289 11.3838 10.5095 10.6232 10.7303C9.50438 11.0523 8.3528 11.1679 7.21328 11.3595C5.77876 11.609 4.33735 11.8151 2.90871 12.0525C2.6272 12.0971 2.37413 12.0258 2.13011 11.8639C1.86914 11.6935 1.6435 11.4507 1.47428 11.1209C1.45218 11.0798 1.4529 11.0352 1.43841 10.9929C1.40253 10.8649 1.42335 10.7501 1.51953 10.668C1.71779 10.4918 1.95264 10.3989 2.18334 10.3289C2.59318 10.2083 2.99099 10.0116 3.42049 9.96581C3.74981 9.77994 4.12534 9.78731 4.46327 9.65579C4.83752 9.50737 5.23831 9.47731 5.60668 9.34096C5.98265 9.20341 6.38172 9.16248 6.75009 9.02614C7.14127 8.88618 7.55557 8.84284 7.93915 8.70408C8.28468 8.57135 8.64744 8.54732 8.98537 8.4158C9.32918 8.2722 9.69194 8.24817 10.0316 8.12751C10.4913 7.97671 10.9647 7.91285 11.4167 7.76325C11.8079 7.62329 12.2239 7.59082 12.6169 7.46173C13.1204 7.29282 13.6326 7.17827 14.1559 7.08424C14.4454 6.89353 14.7905 6.90572 15.1049 6.82249C15.3889 6.74409 15.6942 6.75143 15.9644 6.58607C16.0353 6.54141 16.1224 6.54989 16.2044 6.52577C16.6287 6.44741 17.0472 6.38113 17.4519 6.22789C17.7459 6.11447 18.0595 6.07592 18.3732 6.03738C18.7021 5.99643 19.001 5.81538 19.3205 5.76476C19.6477 5.71294 19.9876 5.69252 20.2892 5.57789C20.7724 5.37878 21.296 5.385 21.7767 5.21971C22.4045 4.9977 23.0726 4.98102 23.7038 4.78075C24.3198 4.5829 24.9692 4.54688 25.5852 4.34903C26.2679 4.12946 26.9731 4.0512 27.6679 3.90771C27.7363 3.89687 27.8083 3.90776 27.8564 3.86672C28.0563 3.70133 28.2915 3.70866 28.5197 3.6725C28.9745 3.58932 29.4293 3.50615 29.884 3.42297C29.8993 3.42056 29.911 3.3964 29.9245 3.38312C29.9059 3.36379 29.8762 3.32393 29.8609 3.32634C29.5321 3.3673 29.2049 3.41912 28.8778 3.47094C28.2767 3.56615 27.6698 3.67342 27.0704 3.7795C26.745 3.84219 26.4341 3.94716 26.1103 4.02072C25.7258 4.10392 25.3284 4.15572 24.9438 4.23892C24.7021 4.28836 24.4517 4.28344 24.2272 4.44157C24.1504 4.49831 24.0311 4.48377 23.9398 4.49823C23.5155 4.57659 23.0894 4.64408 22.6744 4.73211C22.4783 4.77431 22.2846 4.7827 22.1082 4.89978C22.0449 4.94324 21.9502 4.93596 21.8682 4.96009C21.2605 5.11205 20.6263 5.14566 20.0383 5.37251C19.773 5.47024 19.4864 5.48222 19.2142 5.53648C18.942 5.59073 18.6681 5.63411 18.4062 5.75359C18.1655 5.85858 17.894 5.86815 17.6295 5.9212C17.3725 5.97304 17.1156 6.02489 16.8672 6.13108C16.6113 6.23848 16.317 6.25166 16.0448 6.30592C15.803 6.35535 15.5527 6.35044 15.3375 6.51823C15.324 6.53151 15.3071 6.52305 15.2919 6.52546C14.6172 6.59891 13.9845 6.88854 13.3167 7.00546C13.1189 7.0368 12.9304 7.0778 12.7505 7.17314C12.5917 7.25401 12.3981 7.26239 12.2248 7.30098C11.9679 7.35282 11.6964 7.3624 11.4643 7.52173C11.4356 7.53742 11.3975 7.54345 11.3671 7.54827C11.1558 7.59288 10.9427 7.62663 10.7332 7.68211C10.5236 7.7376 10.3268 7.82448 10.1248 7.87876C9.77407 7.97888 9.40615 7.97031 9.07855 8.16705C8.43601 8.24654 7.83623 8.49754 7.20058 8.62051C6.91319 8.67717 6.6113 8.69156 6.3394 8.84605C6.23977 8.90641 6.11287 8.89308 5.99875 8.91116C4.84229 9.09434 3.67822 9.27873 2.52176 9.46191C2.08048 9.53181 1.6392 9.60171 1.20136 9.69335C0.87004 9.76811 0.612516 9.61948 0.415305 9.26074C0.371098 9.1786 0.374268 9.1001 0.434134 9.03491C0.62134 8.83812 0.868966 8.77661 1.09277 8.66316C1.49817 8.46523 1.93601 8.3736 2.3483 8.21915C2.81213 8.0454 3.30494 7.9562 3.7791 7.84766C4.17718 7.75118 4.58214 7.69818 4.98093 7.55701C5.37212 7.41705 5.79159 7.40632 6.20071 7.33037C6.21593 7.32796 6.24047 7.33522 6.2498 7.34488C6.27018 7.37508 6.29817 7.40408 6.30334 7.43669C6.30851 7.4693 6.29429 7.52726 6.27319 7.54174C6.06116 7.63104 5.84151 7.72154 5.62948 7.81084C5.3507 7.92185 5.07951 8.03166 4.80073 8.14267C4.70527 8.18008 4.61914 8.22715 4.51851 8.23195C4.30964 8.24275 4.15531 8.40091 3.97199 8.47451C3.95677 8.47692 3.94672 8.51194 3.94256 8.53489C3.9595 8.54335 3.97643 8.5518 3.99165 8.54939C4.29254 8.47945 4.61653 8.50612 4.90364 8.34922C5.0337 8.28405 5.1876 8.27082 5.33043 8.23705C5.81564 8.14905 6.30845 8.05985 6.79366 7.97185C6.95344 7.94654 7.12427 7.94177 7.26094 7.81984C7.29554 7.79207 7.3564 7.78243 7.40205 7.7752C8.02349 7.71019 8.6191 7.48214 9.22848 7.34105C9.45329 7.28315 9.6867 7.2796 9.89013 7.13596C9.98042 7.06594 10.1149 7.07806 10.2291 7.05999C10.5714 7.00575 10.8959 6.88751 11.2296 6.77893C11.5558 6.67156 11.9161 6.68134 12.2319 6.50875C12.3316 6.44839 12.4585 6.46172 12.5709 6.43277C12.8717 6.36283 13.1888 6.34603 13.4742 6.17825C13.5604 6.13118 13.6686 6.12518 13.7599 6.11072C14.0988 6.03475 14.4336 5.98172 14.7622 5.84053C15.041 5.72952 15.3429 5.71513 15.6379 5.65726C15.8111 5.61867 15.9955 5.60062 16.1584 5.49681C16.2715 5.42318 16.4119 5.42323 16.5413 5.40274C16.8667 5.34005 17.2083 5.3305 17.51 5.21588C18.0388 5.00954 18.6156 5.00731 19.1403 4.82392C19.7394 4.61761 20.377 4.60574 20.9685 4.40063C21.6512 4.18106 22.3632 4.14628 23.0401 3.93878C23.7685 3.71198 24.5286 3.63615 25.2673 3.47457C25.3358 3.46372 25.4077 3.47462 25.4634 3.43237C25.7453 3.24285 26.0659 3.24779 26.3702 3.19959C27.0228 3.08507 27.6771 2.98143 28.3204 2.85725C28.5926 2.803 28.8434 2.66299 29.1266 2.62927C30.2831 2.44609 31.4454 2.25083 32.6001 2.05678C33.0566 1.98447 33.5131 1.91216 33.9696 1.83985C34.3407 1.76993 34.7221 1.76523 35.076 1.58661C35.2061 1.52144 35.3617 1.51907 35.5138 1.49497C37.7355 1.14307 39.9554 0.780294 42.1711 0.440466C42.6276 0.368158 43.0971 0.427491 43.5536 0.355182C43.5841 0.350362 43.6197 0.378151 43.6535 0.395069C43.712 0.419243 43.7444 0.525531 43.7243 0.595571C43.6605 0.783947 43.5433 0.880523 43.3818 0.894962C42.8914 0.950352 42.4379 1.18932 41.9382 1.23505C41.4613 1.27716 40.9948 1.38448 40.5189 1.48214C40.2619 1.53399 39.9981 1.54236 39.7566 1.69203C39.6857 1.73669 39.5986 1.7282 39.5149 1.74146C39.1185 1.84881 38.6991 1.85954 38.3165 2.05385C38.1864 2.11902 38.0308 2.12139 37.8804 2.15636C37.6691 2.20098 37.4509 2.20211 37.2626 2.34335C37.2339 2.35904 37.2035 2.36385 37.1655 2.36988C36.5229 2.44937 35.9266 2.72211 35.2875 2.82334C35.0288 2.86432 34.7608 2.89562 34.5269 3.04409C34.4695 3.07547 34.3993 3.07545 34.3308 3.0863C33.948 3.18037 33.5617 3.2527 33.184 3.37938C32.5376 3.58206 31.8715 3.70985 31.2182 3.86904C31.1362 3.89317 31.0491 3.88469 30.9782 3.92935C30.6928 4.09712 30.3757 4.11392 30.0748 4.18387C29.9015 4.22245 29.7155 4.22964 29.5542 4.34432C29.4833 4.38898 29.3979 4.39136 29.3159 4.41549C28.9331 4.50956 28.5468 4.58189 28.1691 4.70857C27.5759 4.90281 26.9538 5.0125 26.3478 5.17534C26.1611 5.2272 25.9718 5.31289 25.7851 5.36476C25.1926 5.51431 24.5985 5.653 24.0077 5.81342C23.4838 5.95213 22.9632 6.11258 22.4282 6.23075C22.413 6.23316 22.4012 6.25731 22.3953 6.26939C22.3912 6.29233 22.3946 6.31407 22.3905 6.33702C22.202 6.37802 22.0118 6.40814 21.8233 6.44914C21.7928 6.45396 21.7659 6.48052 21.7371 6.49621C21.7617 6.50347 21.7973 6.53126 21.8184 6.51677C21.9934 6.48905 22.1667 6.45046 22.3323 6.41308C22.3966 6.42518 22.4032 6.36842 22.4133 6.3334ZM30.5668 3.2034C30.6961 3.18291 30.8255 3.16242 30.9472 3.14314C30.9624 3.14073 30.9725 3.10571 30.9842 3.08156C30.9673 3.0731 30.9504 3.06464 30.9352 3.06705C30.9199 3.06946 30.9047 3.07187 30.8895 3.07428C30.6841 3.10682 30.4787 3.13936 30.2656 3.1731C30.2352 3.17793 30.2082 3.20449 30.1795 3.22018C30.2116 3.22622 30.2396 3.25522 30.2701 3.2504C30.3766 3.23353 30.4679 3.21907 30.5668 3.2034Z" fill="%23AB3541" /></svg>');
+      position: absolute;
+      left: 0;top: 0;
+    }
+  }
+}
+
+
+.blocktitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products__arrows {
+  display: flex;
+  align-items: center;
+
+  div {
+    margin-left: 15px;
+  }
+
+  svg, path {
+    transition: $transition;
+  }
+}
+
+.products__arrow:hover {
+  svg path {
+    fill: $red;
+  }
+}
+
+.brandslist__wrapper {
+}
+.brandslist__slider {
+}
+.brandslider {
+}
+.brandslider__slider {
+}
+.brandslider__slide {
+}
+main {
+  overflow-x: hidden;
+}
+.brandcard {
+  max-width: 466px;
+  min-width: 466px;
+}
+.brandcard__wrapper {
+}
+.brandcard__image {
+  position: relative;
+  margin-bottom: 33px;
+  @include imagecenter(66%)
+}
+.brandcard__title {
+  margin-bottom: 23px;
+  font-family: var(--second-family);
+font-weight: 700;
+font-size: 42px;
+line-height: 100%;
+text-transform: uppercase;
+color: #fff;
+display: block;
+}
+.brandcard__text {
+  display: block;
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #fff;
+}
+.brandslist {
+  padding: 75px 0;
+  background-image: url(../img/brandslist.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.brandslider__items {
+  display: flex;
+  gap: 40px;
+}
+
+.brandslist__title h2 {
+  color: #fff;
+}
+
+.brandslider__slide:nth-child(1) {
+  
+}
+
+.brandslider__slide:nth-child(2) {
+  margin-top: 90px;
+}
+
+.brandslider__slide:nth-child(3) {
+ margin-top: -70px;
+}
+
+.brandslider__slide:nth-child(4) {
+  margin-top: -40px;
+}
+
+.brandslist__title .blocktitle {
+  margin-bottom: 100px;
+}
+
+[data-myslider-full] {
+  overflow: visible;
+}
+[data-myslider-full] [data-myslider-slider] {
+  overflow: visible;
+}
+
+.slider_full {
+
+}
+
+
+.newsblock__wrapper {
+}
+.newsblock__conrainer {
+}
+.newsblock__items {
+  display: flex;
+  gap: 19px;
+}
+.newsblock__item {
+}
+.newscard {
+  background: #fff;
+  padding: 24px;
+  max-width: 742px;
+  min-width: 742px;
+}
+.newscard__wrapper {
+  display: flex;
+  align-items: center;
+}
+.newscard__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 212px;
+}
+.newscard__title {
+}
+.newscard__date {
+}
+.newscard__image {
+  position: relative;
+
+  @include imagecenter(66%);
+}

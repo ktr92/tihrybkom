@@ -20,7 +20,8 @@ class Myslider {
     this.$dots = document.querySelector(`[data-myslider-dots='${this.sliderID}']`)
     this.dotsItems = null
     this.activeId = 0
-    this.slideWIdth =  this.$el.offsetWidth / this.slidesVisible
+    this.slideWIdth = settings.slidesize ? settings.slidesize : this.$el.offsetWidth / this.slidesVisible
+    this.isFixed = !!settings.slidesize
     this.slides = this.$slider.querySelectorAll(`[data-myslider-slide='${this.sliderID}']`)
     this.slidesCount =  this.slides.length
     this.sectionCount = Math.ceil(this.slidesCount / this.slidesVisible)
@@ -34,19 +35,12 @@ class Myslider {
   }
 
   sliderInit() {
-    if (!this.isCustomwidth) { 
       this.sizeInit()
       window.addEventListener('resize', () => {
         this.activateSlide(0)
         this.sizeInit()
       })
-    } else {
-      this.sizeInitCustom()
-      window.addEventListener('resize', () => {
-        this.activateSlideCustom(0)
-        this.sizeInitCustom()
-      })
-    }
+    
     if (this.$next && this.$prev) {
       this.arrowsInit()
     }
@@ -105,7 +99,10 @@ class Myslider {
         })
       }
       
-      this.slideWIdth = this.$el.offsetWidth / this.slidesVisible
+      if (!this.isFixed) {
+        this.slideWIdth = this.$el.offsetWidth / this.slidesVisible
+
+      }
       
       this.$slider.style.width = `${this.slideWIdth * this.slidesCount}px`
       this.slides.forEach($slide => {
@@ -152,38 +149,9 @@ class Myslider {
     }
   } 
 
-  activateSlideCustom(n) {
-    if (n < 0) {
 
-      const $current = this.$el.querySelector(`[data-mysliderid="${n-1}"]`)
-      const step = $current.getAttribute('data-width')
-      this.position = this.slideWIdth * (this.slidesCount - this.slidesVisible)
-      this.$slider.style.left = -step + 'px'
-      this.activeId = this.slidesCount - this.slidesVisible
-     } else {
-      // если нет слайдов спереди
-      if (n < this.slidesCount - (this.slidesVisible - 1)) {
-        console.log(n)
-
-        const $current = this.$el.querySelector(`[data-mysliderid="${n-1}"]`)
-
-        const step = $current.getAttribute('data-width')
-
-        this.position = this.slideWIdth * n
-        this.$slider.style.left = -step + 'px'
-        this.activeId = n
-       } else {
-        this.$slider.style.left = 0
-        this.activeId = 0
-       }
-     }
-
-     this.activateDot(this.dotsItems, this.activeId)
-
-  }
 
   activateSlide(n) {
-    if ((!this.isCustomwidth)) {
       if (n < 0) {
         this.position = this.slideWIdth * (this.slidesCount - this.slidesVisible)
         this.$slider.style.left = -this.position + 'px'
@@ -198,10 +166,7 @@ class Myslider {
           this.activeId = 0
          }
        }
-    } else {
-      this.activateSlideCustom(n)
-    }
-    
+   
 
      this.activateDot(this.dotsItems, this.activeId)
 
@@ -213,6 +178,7 @@ class Myslider {
        let initialY = null;    
 
        const startTouch = (e) => {
+
          initialX = e.touches[0].clientX;
          initialY = e.touches[0].clientY;
        };     

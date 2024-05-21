@@ -1,7 +1,40 @@
 
 function initFE() {
+  productSlider();
   progressSliderInit();
+  brandSliderInit();
 };
+
+function brandSliderInit() {
+
+  const slider = new Myslider("[data-myslider-container='slider_brands']", {
+    slidesize: 466,
+    responsive: [
+      {
+        width: 480,
+        slidesize: 236
+      }
+    ]
+  })
+
+}
+function productSlider() {
+
+  const slider = new Myslider("[data-myslider-container='slider_products']", {
+    slides: 3,
+    responsive: [
+      {
+        width: 992,
+        slides: 2
+      },
+      {
+        width: 480,
+        slides: 1
+      }
+    ]
+  })
+
+}
 
 function progressSliderInit() {
   const slider = new Myslider("[data-myslider-container='slider_aboutblock']", {
@@ -36,6 +69,19 @@ function dropdownInit() {
 }
 $(document).ready(function () {
 
+  $(document).on('click', "[data-toggleclass]", (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    console.log(e.target)
+    $(e.target).addClass('active')
+  })
+
+  $(function() {
+    $("iframe[data-src]").each(function() {
+        $(this).Lazy();
+    })
+  });
+ 
   new WOW().init();
 
   $(".limitheight__button").on("click", function (e) {
