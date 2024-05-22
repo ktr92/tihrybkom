@@ -36,7 +36,6 @@ class Myslider {
   }
 
   sliderInit() {
-    this.sizeInit()
     window.addEventListener('resize', () => {
       this.activateSlide(0)
       this.sizeInit()
@@ -51,8 +50,10 @@ class Myslider {
     if (this.responsive && this.responsive.length > 0) {
       this.responsive.unshift({width: this.screen, slides: this.settings.slides ?? 1})
     }
-    this.initSwipe()
     this.activateSlide(0)
+    this.sizeInit()
+    this.initSwipe()
+
  
   }
 
@@ -152,6 +153,7 @@ class Myslider {
 
 
   activateSlide(n) {
+    console.log(n)
       if (n < 0) {
         this.position = (this.slideWIdth + this.gap) * (this.slidesCount - this.slidesVisible)
         this.$slider.style.left = -this.position + 'px'

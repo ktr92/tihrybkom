@@ -110,6 +110,19 @@ function dropdownInit() {
   })
 }
 $(document).ready(function () {
+  $("[data-click='scrolltop']").click(function() {
+    $("html, body").animate({scrollTop: 0}, 400);
+ });
+  $(function() {
+    $(window).scroll(function() {
+        console.log('scrolling ', $(window).scrollTop(), $(document).height());
+        if($(window).scrollTop() >= 200 && $(window).scrollTop() <= ($(document).height() - 500)) {
+            $('#scrolltop').removeClass('hide');
+        } else {
+            $('#scrolltop').addClass('hide');
+        }
+    });
+});
 
   $(document).on('click', "[data-toggleclass]", (e) => {
     e.stopPropagation()
@@ -134,7 +147,9 @@ $(document).ready(function () {
   $("[data-toggleclick='mainmenu']").on("click", function (e) {
     e.preventDefault()
     $(".jsbackdrop").toggleClass("active")
+    $(this).toggleClass("active")
     $("[data-toggle='mainmenu']").toggleClass("active")
+    $('#header').toggleClass('active')
   })
 
   $("[data-toggle='menuitems'").on("click", function (e) {
