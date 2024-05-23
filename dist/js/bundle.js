@@ -56,7 +56,6 @@ function newsSliderInit() {
     ]
   })
 
-  console.log(slider)
 
 
 }
@@ -71,7 +70,7 @@ function productSlider() {
       },
       {
         width: 480,
-        slides: 1
+        slides: 0
       }
     ]
   })
@@ -115,19 +114,26 @@ $(document).ready(function () {
  });
   $(function() {
     $(window).scroll(function() {
-        console.log('scrolling ', $(window).scrollTop(), $(document).height());
         if($(window).scrollTop() >= 200 && $(window).scrollTop() <= ($(document).height() - 500)) {
-            $('#scrolltop').removeClass('hide');
+            $('#scrolltop').addClass('active');
         } else {
-            $('#scrolltop').addClass('hide');
+            $('#scrolltop').removeClass('active');
         }
     });
 });
 
+
+  document.querySelector('[data-videobutton]').addEventListener('click', event => {
+    event.stopPropagation()
+    const VIDEO_ID = event.target.getAttribute('data-videobutton')
+    $(`iframe[data-videoid='${VIDEO_ID}']`)[0].src += "&autoplay=1"
+    event.target.style.display = 'none'
+  })
+
+  
   $(document).on('click', "[data-toggleclass]", (e) => {
     e.stopPropagation()
     e.preventDefault()
-    console.log(e.target)
     $(e.target).addClass('active')
   })
 
@@ -894,7 +900,6 @@ function quantityForm() {
     var currentVal = +parseFloat(
       parent.find("input[name=" + fieldName + "]").val()
     ).toFixed(1)
-    console.log(currentVal)
     if (!isNaN(currentVal)) {
       parent
         .find("input[name=" + fieldName + "]")
@@ -911,7 +916,6 @@ function quantityForm() {
     var currentVal = +parseFloat(
       parent.find("input[name=" + fieldName + "]").val()
     ).toFixed(1)
-    console.log(currentVal)
     if (!isNaN(currentVal) && currentVal > step) {
       parent
         .find("input[name=" + fieldName + "]")

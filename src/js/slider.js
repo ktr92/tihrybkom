@@ -35,6 +35,13 @@ class Myslider {
     return typeof value === 'number';
   }
 
+  turnOff() {
+    this.$slider.style.flexWrap = 'wrap'
+    this.$next.style.display = 'none'
+    this.$prev.style.display = 'none'
+    this.$dots.style.display = 'none'
+  }
+
   sliderInit() {
     window.addEventListener('resize', () => {
       this.activateSlide(0)
@@ -94,6 +101,10 @@ class Myslider {
 
       if (this.responsive && this.responsive.length) {
         this.responsive.forEach((size, index) => {
+          if (!size.slides) {
+            this.turnOff()
+            return
+          }
           if (size.width > window.innerWidth) {
             this.screen = size.width
             this.slidesVisible = size.slides
