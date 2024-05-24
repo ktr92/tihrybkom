@@ -109,6 +109,10 @@ function dropdownInit() {
   })
 }
 $(document).ready(function () {
+
+
+  
+
   $("[data-click='scrolltop']").click(function() {
     $("html, body").animate({scrollTop: 0}, 400);
  });
@@ -156,8 +160,14 @@ $(document).ready(function () {
     $(this).toggleClass("active")
     $("[data-toggle='mainmenu']").toggleClass("active")
     $('#header').toggleClass('active')
+    $('[data-toggle="headersearch"]').toggleClass("active")
   })
 
+  $("[data-toggleclick='headersearch']").on("click", function (e) {
+    e.preventDefault()
+    $('[data-toggle="headersearch"]').toggleClass("active")
+
+  })
   $("[data-toggle='menuitems'").on("click", function (e) {
     e.preventDefault()
     $(this).siblings("li:not(.active)").toggleClass("active")

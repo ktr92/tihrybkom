@@ -37,9 +37,15 @@ class Myslider {
 
   turnOff() {
     this.$slider.style.flexWrap = 'wrap'
-    this.$next.style.display = 'none'
-    this.$prev.style.display = 'none'
-    this.$dots.style.display = 'none'
+    if (this.$next) {
+      this.$next.style.display = 'none'
+    }
+    if (this.$prev) {
+      this.$prev.style.display = 'none'
+    }
+    if (this.$dots) {
+      this.$dots.style.display = 'none'
+    }
   }
 
   sliderInit() {
