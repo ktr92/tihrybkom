@@ -107,7 +107,7 @@ class Myslider {
 
       if (this.responsive && this.responsive.length) {
         this.responsive.forEach((size, index) => {
-          if (!size.slides) {
+          if (size.slides === 0) {
             this.turnOff()
             return
           }
@@ -121,11 +121,18 @@ class Myslider {
       if (!this.isFixed) {
         this.slideWIdth = this.$el.offsetWidth / this.slidesVisible
       } 
+   
       
       this.$slider.style.width = `${this.slideWIdth * this.slidesCount}px`
       this.slides.forEach($slide => {
-        $slide.style.width =   `${this.slideWIdth}px`
+       
         $slide.dataset.mysliderid = index
+
+        if (this.slideHeight) {
+          $slide.style.height = this.slideHeight
+        } else {
+          $slide.style.width =   `${this.slideWIdth}px`
+        }
         index++
       })
 

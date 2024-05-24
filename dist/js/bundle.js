@@ -81,13 +81,10 @@ function progressSliderInit() {
   const slider = new Myslider("[data-myslider-container='slider_aboutblock']", {
     height: 711,
     responsive: [
-      {
-        width: 992,
-        slides: 2
-      },
+     
       {
         width: 480,
-        slides: 1
+        height: 222,
       }
     ]
   });

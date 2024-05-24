@@ -2457,7 +2457,29 @@ a.burgermenu.active span:last-child {
     line-height: unset;
     height: unset;
     padding: 18px;
-    text-align: center; } }
+    text-align: center; }
+  .categoryblock__wrapper {
+    padding: 27px 33px; }
+  .categoryblock__title {
+    font-size: 19px;
+    padding-bottom: 13px; }
+  .categoryblock__image {
+    width: 160px; }
+  .categoryblocks {
+    margin-top: -35px; }
+  .aboutblock__main {
+    margin-right: 0; }
+  .aboutblock__sliderblock {
+    order: -1; }
+  .aboutblock__title {
+    margin-bottom: 28px;
+    display: block; }
+  .aboutblock__nav {
+    width: 100%;
+    order: -1; }
+  .aboutblock__main {
+    display: flex;
+    flex-direction: column; } }
 
 
 /*# sourceMappingURL=style.bundle.css.map*/
