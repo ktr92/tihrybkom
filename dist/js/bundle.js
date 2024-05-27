@@ -27,7 +27,35 @@ function initFE() {
   progressSliderInit();
   brandSliderInit();
   newsSliderInit();
+  lazyLoadSrc('img');
+  lazyLoadSrc('iframe', 'https://www.youtube.com/embed/', '?rel=0&amp;amp;showinfo=0;amp;autoplay=0"');
 };
+
+
+
+function lazyLoadSrc(selector, prevalue = '', postvalue = '') {
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      const img = entry.target
+      if (entry.intersectionRatio > 0) {
+        if (!img.getAttribute('src')) {
+            img.setAttribute('src', prevalue + img.dataset.src + postvalue)
+              
+          observer.unobserve(img)
+        }
+      }
+    })
+  }
+  const target = document.querySelectorAll(selector)
+  const options = {
+    threshold: 0.4
+  }
+  let obs = new IntersectionObserver(callback, options)
+  target.forEach(item => {
+    obs.observe(item)
+
+  })
+}
 
 function brandSliderInit() {
   const slider = new Myslider("[data-myslider-wrapper='slider_brands']", {
@@ -145,11 +173,11 @@ $(document).ready(function () {
     $(e.target).addClass('active')
   })
 
-  $(function() {
+ /*  $(function() {
     $("iframe[data-src]").each(function() {
         $(this).Lazy();
     })
-  });
+  }); */
  
   new WOW().init();
 

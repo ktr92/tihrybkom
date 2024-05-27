@@ -131,7 +131,6 @@ class Myslider {
     this.initSwipe()
 
     this.$slider.classList.add('slider-active')
-    console.log(this)
   }
 
   arrowsInit() {
@@ -276,7 +275,6 @@ class Myslider {
 
 
   activateSlide(n) {
-    console.log(n)
     if (!this.slideHeight) {
       const limit = this.slidesVisible ? this.slidesCount - (this.slidesVisible - 1) : this.slides.length
       if (n < 0) {
