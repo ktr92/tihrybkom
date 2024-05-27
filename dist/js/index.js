@@ -12,6 +12,10 @@ function brandSliderInit() {
     gap: 40,
     responsive: [
       {
+        width: 992,
+        slideSize: 333
+      },
+      {
         width: 480,
         slideSize: 236
       }
@@ -27,8 +31,12 @@ function newsSliderInit() {
     gap: 19,
     responsive: [
       {
+        width: 992,
+        slideSize: 444
+      },
+      {
         width: 480,
-        slideSize: 236
+        slideSize: 300
       }
     ]
   })

@@ -302,4 +302,198 @@ text-align: center;
   display: flex;
   flex-direction: column;
 }
+.brandcard, .newscard {
+  max-width: 100%;
+  min-width: 100%;
+}
+.aboutblock__nav {
+  margin-top: 18px;
+}
+.aboutblock__text {
+  margin-bottom: 0;
+}
+.aboutblock {
+  padding-bottom: 40px;
+}
+.videoblock {
+  padding: 24px 0 88px 0;
+  iframe {
+    min-height: 190px;
+  }
+}
+.videoblock__title {
+  margin-bottom: 22px;
+}
+
+.videoblock__wrapper {
+  height: unset;
+}
+.video-link-classic {
+  width: 68px;
+  height: 68px;
+}
+.video-link-classic-overlay {
+  width: 72px;
+  height: 72px;
+  top: -2px;
+  left: -2px;
+}
+.videoblock__stats {
+  flex-wrap: wrap;
+}
+
+.videoblock__stat {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.videoblock__statText {
+  margin-left: 39px;
+}
+.videoblock__text {
+  margin: 22px 0;
+}
+.fitchesblock__items {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fitchesblock__item {
+  width: 100%;
+  min-width: 100%;
+}
+.fitchescard {
+  padding: 18px;
+}
+.fitchescard__icon{
+  width: 32px;
+  margin-bottom: 15px;
+}
+.fitchescard__title {
+  font-size: 18px;
+}
+.fitchesblock {
+  margin-bottom: 34px;
+  margin-top: -50px;
+}
+.blocktitle {
+  margin-bottom: 32px;
+}
+.cataloglist__slider .cataloglist__item {
+  max-width: 100%;
+}
+.brandslist {
+  padding: 28px 0;
+}
+.products__arrows svg {
+  width: 51px;
+}
+.brandslist__title .blocktitle {
+  margin-bottom: 41px;
+}
+
+.brandslider__slide:nth-child(2) {
+  margin-top: 30px;
+}
+
+.brandslider__slide:nth-child(3) {
+ margin-top: -30px;
+}
+
+.brandslider__slide:nth-child(4) {
+  margin-top: 0px;
+}
+.brandcard__image {
+  margin-bottom: 20px;
+}
+.brandcard__title {
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+
+.brandcard__text {
+  font-size: 14px;
+}
+
+.newsblock {
+  padding: 32px 0;
+}
+.newscard__wrapper {
+  flex-wrap: wrap;
+  width: 100%;
+}
+.newscard__image {
+  order: -1;
+}
+.newscard__image {
+  max-width: 100%;
+  min-width: 100%;
+
+  @include imagecenter(56%);
+}
+.newscard {
+  padding: 0;
+}
+.newscard__content {
+  margin: 0;
+  width: 100%;
+  padding: 21px 25px;
+}
+.newscard__title {
+  font-size: 22px;
+  padding-bottom: 17px;
+}
+.newscard__content {
+  height: 138px;
+}
+.newscard__date {
+  margin-top: 12px;
+}
+.newsblock__items  {
+  gap: 8px;
+}
+.footer__item {
+  min-height: unset;
+}
+.footer__center {
+  order: -2;
+}
+.footer__right {
+  order: -1;
+}
+.footercols__col {
+  width: 100%;
+  margin-bottom: 26px;
+}
+.footer {
+  padding: 33px 0;
+}
+.footermenu__title {
+  margin-bottom: 14px;
+}
+.footerinfo__logo {
+  margin-bottom: 22px;
+  display: block;
+}
+.productcard__title a {
+  height: unset;
+}
+.footer__left {
+  margin-top: 38px;
+}
+
+.videoblock__wrapper {
+  position: relative;
+   width: 100%;
+   height: 0;
+   padding-bottom: 56.25%;
+}
+.videoblock__wrapper iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
 }

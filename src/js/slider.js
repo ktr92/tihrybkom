@@ -61,6 +61,12 @@ class Myslider {
     this.$next = this.$root.querySelector(`[data-myslider-next='${this.sliderID}']`)
     this.$prev = this.$root.querySelector(`[data-myslider-prev='${this.sliderID}']`)
     this.$dots = this.$root.querySelector(`[data-myslider-dots='${this.sliderID}']`)
+    this.$current = this.$root.querySelector(`[data-myslider-barcurrent='${this.sliderID}']`)
+    this.$total = this.$root.querySelector(`[data-myslider-bartotal='${this.sliderID}']`)
+    this.$bline = this.$root.querySelector(`[data-myslider-barline='${this.sliderID}']`)
+    if (this.$total) {
+      this.$total.innerHTML = this.slides.length
+    }
     this.dotsItems = null
     this.off = false
     
@@ -139,6 +145,8 @@ class Myslider {
   }
   
   sizeInitCustom() {
+    this.slideStep = []
+
     let index = 0
 
     this.$slider.style.height =  `${this.slideHeight}px`
@@ -167,22 +175,36 @@ class Myslider {
       if (window.innerWidth < this.responsive[1].width && this.responsive && this.responsive.length) {
         this.responsive.forEach((size, index) => {
 
-          if (size.height) {
-            this.slideHeight = size.height
-            this.sizeInitCustom()
-            return;
+          if (size.width > window.innerWidth) {
+            if (size.slidesCount === 0 && !this.off) {
+              this.turnOff()
+              return;
+            } else {
+              this.turnOn()
+            }
+
+            if (size.slideHeight) {
+              this.slideHeight = size.slideHeight
+              this.sizeInitCustom()
+              return;
+            }
+
+            if (size.slidesCount) {
+              if (size.width > window.innerWidth) {
+                this.screen = size.width
+                this.slidesVisible = size.slidesCount
+                this.slideWIdth = window.innerWidth / size.slidesCount
+              }
+            }
+            if (size.slideSize) {
+              this.slideWIdth = size.slideSize
+            }
+  
+           
+           
           }
 
-          if (size.slidesCount === 0 && !this.off) {
-            this.turnOff()
-            return;
-          } else {
-            this.turnOn()
-          }
-          if (size.width > window.innerWidth) {
-            this.screen = size.width
-            this.slidesVisible = size.slidesCount
-          }
+          
         })
       }
 
@@ -205,7 +227,8 @@ class Myslider {
           if (this.slideHeight) {
             $slide.style.height = this.slideHeight
           } else {
-            $slide.style.width =   `${this.slideWIdth}px`
+            $slide.style.maxWidth =   `${this.slideWIdth}px`
+            $slide.style.minWidth =   `${this.slideWIdth}px`
           }
           index++
         })
@@ -273,8 +296,14 @@ class Myslider {
     } else {
       this.activateSlideCustom(n)
     }
+
+    if (this.$current && this.$total) {
+      this.$current.innerHTML = this.activeId + 1
+      this.$bline.querySelector('[data-myslider-barscroll]').style.width = ((this.activeId + 1)) * (this.$bline.getBoundingClientRect().width / this.slides.length) + 'px'
+    }
+
       
-      this.activateDot(this.dotsItems, this.activeId)
+    this.activateDot(this.dotsItems, this.activeId)
 
   }
   
@@ -284,7 +313,7 @@ class Myslider {
       this.slideStep.forEach((step, index) => {
         return this.position += step
       })
-      this.$slider.style.left = -this.position - this.slideStep[this.slideStep.length - 1] + 'px'
+      this.$slider.style.left = -this.position + this.slideStep[this.slideStep.length - 1] + 'px'
       this.activeId = this.slideStep.length - 1
     } else {
       if (n < this.slidesCount) {
