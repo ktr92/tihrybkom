@@ -1,42 +1,81 @@
+/*** 
+ * slidesCount: number - показать определнное количество слайдов одинаковой длины
+ * slideSize: number - показывать слайды определенной ширины
+ * slideHeight: number - показать слайды определенной высоты, разной ширины
+ * ***/
+
 class Myslider {
   constructor(selector, settings) {
     this.settings = settings
-    if (!settings.height) {
-      this.slidesVisible = settings.slides
+    this.$root = document.querySelector(selector)
+    this.sliderID = this.$root.dataset.mysliderWrapper
+
+    this.$container = this.$root.querySelector(`[data-myslider-container='${this.sliderID}']`)
+    this.$slider =  this.$root.querySelector(`[data-myslider-slider='${this.sliderID}']`)
+    this.slides = this.$root.querySelectorAll(`[data-myslider-slide='${this.sliderID}']`)
+
+    this.screen = window.screen.width
+
+    // если задана высота
+    if (this.settings.slideHeight) {
+      this.slideHeight = this.settings.slideHeight
+      this.slidesVisible = 0
       this.isCustomwidth = 0
-    } else {
-      this.slidesVisible = 1
-      this.isCustomwidth = 1
-      this.slideHeight = settings.height
+      this.slideWIdth = null
+      this.isFixed = 1
+      this.slideStep = []
+      
+
     }
-/*     this.slidesVisible = this.isNumber(settings.slides) ? settings.slides : 1
- */    this.screen = window.screen.width
-    this.$root = document.querySelector(`[data-myslider-wrapper='${this.sliderID}']`)
-    this.$el = document.querySelector(selector) 
-    this.sliderID = this.$el.dataset.mysliderContainer
-    this.$slider = this.$el.querySelector(`[data-myslider-slider='${this.sliderID}']`)
-    this.$next = document.querySelector(`[data-myslider-next='${this.sliderID}']`)
-    this.$prev = document.querySelector(`[data-myslider-prev='${this.sliderID}']`)
-    this.$dots = document.querySelector(`[data-myslider-dots='${this.sliderID}']`)
-    this.dotsItems = null
+
+    // если задана ширина
+    if (this.settings.slideSize) {
+      this.slidesVisible = 0
+      this.isCustomwidth = 1
+      this.slideHeight = 0
+      this.slideWIdth = this.settings.slideSize
+      this.isFixed = 1
+      this.slideStep = this.slideWIdth
+    }
+
+    // если задано количество слайдов
+    if (this.settings.slidesCount) {
+      this.slidesVisible = this.settings.slidesCount
+      this.isCustomwidth = 0
+      this.slideHeight = 0
+      this.slideWIdth = this.$container.offsetWidth / this.slidesVisible
+      this.isFixed = false
+      this.slideStep = this.slideWIdth
+
+    }
+
     this.activeId = 0
-    this.slideWIdth = settings.slidesize ? settings.slidesize : this.$el.offsetWidth / this.slidesVisible
-    this.isFixed = !!settings.slidesize
-    this.slides = this.$slider.querySelectorAll(`[data-myslider-slide='${this.sliderID}']`)
+    this.position = this.$slider.style.left
+
     this.slidesCount =  this.slides.length
     this.sectionCount = this.slidesCount ? Math.ceil(this.slidesCount / this.slidesVisible) : 1
-    this.position = this.$slider.style.left
     this.responsive = settings.responsive ?? null
     this.gap = settings.gap ?? 0
+
+    // навигация
+    this.$next = this.$root.querySelector(`[data-myslider-next='${this.sliderID}']`)
+    this.$prev = this.$root.querySelector(`[data-myslider-prev='${this.sliderID}']`)
+    this.$dots = this.$root.querySelector(`[data-myslider-dots='${this.sliderID}']`)
+    this.dotsItems = null
+    this.off = false
+    
     this.sliderInit()
   }
 
-   isNumber(value) {
+  isNumber(value) {
     return typeof value === 'number';
   }
 
   turnOff() {
+    this.off = true
+
     this.$slider.style.flexWrap = 'wrap'
+    this.$slider.style.width = 'unset'
     if (this.$next) {
       this.$next.style.display = 'none'
     }
@@ -46,6 +85,24 @@ class Myslider {
     if (this.$dots) {
       this.$dots.style.display = 'none'
     }
+    this.slides.forEach($slide => {
+      $slide.style.width = 'unset'
+    })
+  }
+  turnOn() {
+    this.off = false
+
+    this.$slider.style.flexWrap = 'none'
+    if (this.$next) {
+      this.$next.style.display = 'block'
+    }
+    if (this.$prev) {
+      this.$prev.style.display = 'block'
+    }
+    if (this.$dots) {
+      this.$dots.style.display = 'block'
+    }
+
   }
 
   sliderInit() {
@@ -61,13 +118,14 @@ class Myslider {
       this.dotsInit()
     }
     if (this.responsive && this.responsive.length > 0) {
-      this.responsive.unshift({width: this.screen, slides: this.settings.slides ?? 1})
+      this.responsive.unshift({width: this.screen, slidesCount: this.settings.slidesCount ?? 1})
     }
     this.activateSlide(0)
     this.sizeInit()
     this.initSwipe()
 
- 
+    this.$slider.classList.add('slider-active')
+    console.log(this)
   }
 
   arrowsInit() {
@@ -98,6 +156,7 @@ class Myslider {
         $slide.dataset.width = $content.width
       }
       this.$slider.style.width = `${totalWidth}px`
+      this.slideStep.push($slide.offsetWidth)
       index++
   })
 }
@@ -105,36 +164,53 @@ class Myslider {
   sizeInit() {
     let index = 0
 
-      if (this.responsive && this.responsive.length) {
+      if (window.innerWidth < this.responsive[1].width && this.responsive && this.responsive.length) {
         this.responsive.forEach((size, index) => {
-          if (size.slides === 0) {
+
+          if (size.height) {
+            this.slideHeight = size.height
+            this.sizeInitCustom()
+            return;
+          }
+
+          if (size.slidesCount === 0 && !this.off) {
             this.turnOff()
-            return
+            return;
+          } else {
+            this.turnOn()
           }
           if (size.width > window.innerWidth) {
             this.screen = size.width
-            this.slidesVisible = size.slides
+            this.slidesVisible = size.slidesCount
           }
         })
       }
-      
-      if (!this.isFixed) {
-        this.slideWIdth = this.$el.offsetWidth / this.slidesVisible
-      } 
-   
-      
-      this.$slider.style.width = `${this.slideWIdth * this.slidesCount}px`
-      this.slides.forEach($slide => {
-       
-        $slide.dataset.mysliderid = index
 
-        if (this.slideHeight) {
-          $slide.style.height = this.slideHeight
-        } else {
-          $slide.style.width =   `${this.slideWIdth}px`
-        }
-        index++
-      })
+      if (this.slideHeight) {
+        this.sizeInitCustom()
+        return;
+      }
+      
+    /*   if (!this.isFixed) {
+        this.slideWIdth = this.$slider.offsetWidth / this.slidesVisible
+      }  */
+   
+      if (!this.off) {
+        this.slideStep = this.slideWIdth
+        this.$slider.style.width = `${this.slideWIdth * this.slidesCount}px`
+        this.slides.forEach($slide => {
+         
+          $slide.dataset.mysliderid = index
+  
+          if (this.slideHeight) {
+            $slide.style.height = this.slideHeight
+          } else {
+            $slide.style.width =   `${this.slideWIdth}px`
+          }
+          index++
+        })
+      }
+    
 
    
     
@@ -145,7 +221,7 @@ class Myslider {
     for (let i = 0; i < this.sectionCount; i++) {
       this.$dots.insertAdjacentHTML('beforeend', `<div class="myslider__dots__button" data-mysliderdot="${i * (this.slidesVisible)}" data-myslider-dotid='${this.sliderID}'></div>`)
     }
-    const dots = document.querySelectorAll(`[data-myslider-dotid='${this.sliderID}']`)
+    const dots = this.$root.querySelectorAll(`[data-myslider-dotid='${this.sliderID}']`)
     dots[0].classList.add('active')
 
     dots.forEach(el => {
@@ -165,7 +241,7 @@ class Myslider {
   }
 
   activateDot(dots, id) {
-    const activeDot = document.querySelector(`[data-mysliderdot="${id}"][data-myslider-dotid='${this.sliderID}']`)
+    const activeDot = this.$root.querySelector(`[data-mysliderdot="${id}"][data-myslider-dotid='${this.sliderID}']`)
     if (activeDot) {
       dots.forEach(dot => {
         dot.classList.remove('active')
@@ -178,12 +254,14 @@ class Myslider {
 
   activateSlide(n) {
     console.log(n)
+    if (!this.slideHeight) {
+      const limit = this.slidesVisible ? this.slidesCount - (this.slidesVisible - 1) : this.slides.length
       if (n < 0) {
         this.position = (this.slideWIdth + this.gap) * (this.slidesCount - this.slidesVisible)
         this.$slider.style.left = -this.position + 'px'
         this.activeId = this.slidesCount - this.slidesVisible
        } else {
-        if (n < this.slidesCount - (this.slidesVisible - 1)) {
+        if (n < limit) {
           this.position = (this.slideWIdth + this.gap) * n
           this.$slider.style.left = -this.position + 'px'
           this.activeId = n
@@ -192,10 +270,35 @@ class Myslider {
           this.activeId = 0
          }
        }
-   
+    } else {
+      this.activateSlideCustom(n)
+    }
+      
+      this.activateDot(this.dotsItems, this.activeId)
 
-     this.activateDot(this.dotsItems, this.activeId)
-
+  }
+  
+  activateSlideCustom(n) {
+    if (n < 0) {
+      this.position = 0
+      this.slideStep.forEach((step, index) => {
+        return this.position += step
+      })
+      this.$slider.style.left = -this.position - this.slideStep[this.slideStep.length - 1] + 'px'
+      this.activeId = this.slideStep.length - 1
+    } else {
+      if (n < this.slidesCount) {
+        this.position = 0
+        this.slideStep.forEach((step, index) => {
+          return this.position += Number(index < n) * step
+        })
+        this.$slider.style.left = -this.position + 'px'
+        this.activeId = n
+       } else {
+        this.$slider.style.left = 0
+        this.activeId = 0
+       }
+    }
   }
 
 
@@ -237,8 +340,15 @@ class Myslider {
          e.preventDefault();
        };
 
-       this.$slider.addEventListener("touchstart", startTouch, false);
-       this.$slider.addEventListener("touchmove", moveTouch, false);
+       if (!this.off) {
+        this.$slider.addEventListener("touchstart", startTouch, false);
+        this.$slider.addEventListener("touchmove", moveTouch, false);
+       } else {
+        this.$slider.removeEventListener("touchstart", startTouch, false);
+        this.$slider.removeEventListener("touchmove", moveTouch, false);
+       }
+
+   
   }
 
 }

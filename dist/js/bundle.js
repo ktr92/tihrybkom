@@ -30,13 +30,13 @@ function initFE() {
 };
 
 function brandSliderInit() {
-  const slider = new Myslider("[data-myslider-container='slider_brands']", {
-    slidesize: 466,
+  const slider = new Myslider("[data-myslider-wrapper='slider_brands']", {
+    slideSize: 466,
     gap: 40,
     responsive: [
       {
         width: 480,
-        slidesize: 236
+        slideSize: 236
       }
     ]
   })
@@ -45,13 +45,13 @@ function brandSliderInit() {
 
 }
 function newsSliderInit() {
-  const slider = new Myslider("[data-myslider-container='slider_news']", {
-    slidesize: 742,
+  const slider = new Myslider("[data-myslider-wrapper='slider_news']", {
+    slideSize: 742,
     gap: 19,
     responsive: [
       {
         width: 480,
-        slidesize: 236
+        slideSize: 236
       }
     ]
   })
@@ -61,16 +61,16 @@ function newsSliderInit() {
 }
 function productSlider() {
 
-  const slider = new Myslider("[data-myslider-container='slider_products']", {
-    slides: 3,
+  const slider = new Myslider("[data-myslider-wrapper='slider_products']", {
+    slidesCount: 3,
     responsive: [
       {
         width: 992,
-        slides: 2
+        slidesCount: 2
       },
       {
         width: 480,
-        slides: 0
+        slidesCount: 0
       }
     ]
   })
@@ -78,13 +78,12 @@ function productSlider() {
 }
 
 function progressSliderInit() {
-  const slider = new Myslider("[data-myslider-container='slider_aboutblock']", {
-    height: 711,
+  const slider = new Myslider("[data-myslider-wrapper='slider_aboutblock']", {
+    slideHeight: 711,
     responsive: [
-     
       {
         width: 480,
-        height: 222,
+        slideHeight: 222,
       }
     ]
   });

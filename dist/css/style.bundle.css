@@ -1106,6 +1106,7 @@ a.burgermenu {
   position: relative;
   transition: left 0.5s;
   overflow-x: hidden;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   left: 0; }
 
