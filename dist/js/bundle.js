@@ -61,6 +61,8 @@ function brandSliderInit() {
   const slider = new Myslider("[data-myslider-wrapper='slider_brands']", {
     slideSize: 466,
     gap: 40,
+    prevArrow: '[data-myslider-prev]',
+    nextArrow: '[data-myslider-next]',
     responsive: [
       {
         width: 992,
@@ -116,11 +118,25 @@ function productSlider() {
 function progressSliderInit() {
   const slider = new Myslider("[data-myslider-wrapper='slider_aboutblock']", {
     slideHeight: 711,
+    prevArrow: '[data-prev]',
+    nextArrow: '[data-next]',
+    progressBar: {
+      barcurrent: '[data-barcurrent]',
+      bartotal: '[data-bartotal]',
+      barline: '[data-barline]',
+      bar: '[data-bar]',
+      barscroll: '[data-barscroll]',
+    },
     responsive: [
       {
+        width: 992,
+        slideHeight: 444
+      },
+      {
         width: 480,
-        slideHeight: 222,
+        slideHeight: 222
       }
+     
     ]
   });
 }
