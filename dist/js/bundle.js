@@ -58,27 +58,32 @@ function lazyLoadSrc(selector, prevalue = '', postvalue = '') {
 }
 
 function brandSliderInit() {
-  const slider = new Myslider("[data-myslider-wrapper='slider_brands']", {
-    slideSize: 466,
-    gap: 40,
-    prevArrow: '[data-myslider-prev]',
-    nextArrow: '[data-myslider-next]',
-    responsive: [
-      {
-        width: 992,
-        slideSize: 333
-      },
-      {
-        width: 480,
-        slideSize: 236
-      }
-    ]
-  })
-
+  if (document.querySelector("[data-myslider-wrapper='slider_brands']")) {
+    const slider = new Myslider("[data-myslider-wrapper='slider_brands']", {
+      slideSize: 466,
+      gap: 40,
+      prevArrow: '[data-myslider-prev]',
+      nextArrow: '[data-myslider-next]',
+      responsive: [
+        {
+          width: 992,
+          slideSize: 333
+        },
+        {
+          width: 480,
+          slideSize: 236
+        }
+      ]
+    })
+  
+  }
+  
 
 
 }
 function newsSliderInit() {
+  if (document.querySelector("[data-myslider-wrapper='slider_news']")) {
+
   const slider = new Myslider("[data-myslider-wrapper='slider_news']", {
     slideSize: 742,
     gap: 19,
@@ -93,11 +98,13 @@ function newsSliderInit() {
       }
     ]
   })
+}
 
 
 
 }
 function productSlider() {
+  if (document.querySelector("[data-myslider-wrapper='slider_products']")) {
 
   const slider = new Myslider("[data-myslider-wrapper='slider_products']", {
     slidesCount: 3,
@@ -112,10 +119,13 @@ function productSlider() {
       }
     ]
   })
+}
 
 }
 
 function progressSliderInit() {
+  if (document.querySelector("[data-myslider-wrapper='slider_aboutblock']")) {
+
   const slider = new Myslider("[data-myslider-wrapper='slider_aboutblock']", {
     slideHeight: 711,
     prevArrow: '[data-prev]',
@@ -139,6 +149,7 @@ function progressSliderInit() {
      
     ]
   });
+}
 }
 
 function dropdownInit() {
@@ -174,13 +185,17 @@ $(document).ready(function () {
     });
 });
 
+  const video = document.querySelector('[data-videobutton]')
 
-  document.querySelector('[data-videobutton]').addEventListener('click', event => {
-    event.stopPropagation()
-    const VIDEO_ID = event.target.getAttribute('data-videobutton')
-    $(`iframe[data-videoid='${VIDEO_ID}']`)[0].src += "&autoplay=1"
-    event.target.style.display = 'none'
-  })
+  if (video) {
+    video.addEventListener('click', event => {
+      event.stopPropagation()
+      const VIDEO_ID = event.target.getAttribute('data-videobutton')
+      $(`iframe[data-videoid='${VIDEO_ID}']`)[0].src += "&autoplay=1"
+      event.target.style.display = 'none'
+    })
+  }
+ 
 
   
   $(document).on('click', "[data-toggleclass]", (e) => {
