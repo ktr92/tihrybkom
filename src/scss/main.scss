@@ -2210,19 +2210,43 @@ text-transform: uppercase;
 color: #fff;
 margin: 0;
   }
-
+  .categoryblock__title  {
+    display: block;
+    max-width: 183px;
+  }
   .categoryblocks_page {
     padding: 84px 0;
 
+    .categoryblock__title {
+      font-family: var(--second-family);
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
     .categoryblocks__items {
       flex-wrap: wrap;
+      gap: 14px;
     }
 
     .categoryblocks__item {
-      width: calc(100% / 3);
+      flex-grow: 1;
+      max-width: calc(100% / 4 - 14px);
     }
 
     .categoryblock__wrapper {
       height: 319px;
+/*       overflow: hidden; */
+      padding: 36px 44px;
     }
+
+    .categoryblock__image {
+      right: 0;
+    }
+  }
+
+  .aboutblock_page {
+    padding-top: 20px;
   }
