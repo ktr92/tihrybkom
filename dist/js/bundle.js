@@ -29,6 +29,9 @@ function initFE() {
   newsSliderInit();
   lazyLoadSrc('img');
   lazyLoadSrc('iframe', 'https://www.youtube.com/embed/', '?rel=0&amp;amp;showinfo=0;amp;autoplay=0"');
+  closeByOutsideSelect()
+  closeByClickOutside('.mainmenu', '.mainmenubtn')
+  closeByClickOutside('.catalogpage__aside', '.js-mobilefilter')
 };
 
 
