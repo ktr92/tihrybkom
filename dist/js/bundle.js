@@ -172,7 +172,11 @@ function dropdownInit() {
 }
 $(document).ready(function () {
 
-
+  $('.js-mobilefilter').on('click', function(e) {
+    e.preventDefault()
+    $(this).toggleClass('active')
+    $('.catalogpage__aside').toggleClass('active')
+})
   
 
   $("[data-click='scrolltop']").click(function() {

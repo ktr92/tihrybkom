@@ -332,7 +332,15 @@
       
             <div class="catalogpage">
               <div class="container">
+                <div class="mobilefilter onlyMobile ">
+                  <a href="#" class='  btn_filter js-mobilefilter'>
+                    <img src="img/mobilefilter.svg" alt="">
+                    <span>Фильтры</span>
+                  </a>
+                </div>
+                <!-- /.mobilefilter -->
                 <div class="catalogpage__wrapper">
+               
                   <div class="catalogpage__aside catalogaside">
                     <aside>
                       <div class="catalogaside__back">
@@ -374,7 +382,14 @@
                       </div>
                       <!-- /.catalogaside__links catalogcats -->
                       <div class="catalogaside__filter">
+                        <div class="mobilefilter onlyMobile ">
+                          <a href="#" class='  btn_filter js-mobilefilter''>
+                            <img src="img/mobilefilter.svg" alt="">
+                            <span>Фильтры</span>
+                          </a>
+                        </div>
                         <div class="filter">
+                         
                           <form action="">
                             <div class="filter__items">
                               <div class="filter__item filter__item_open">
@@ -482,6 +497,17 @@
                               </div>
                              
                             </div>
+
+                            <div class="filter__buttons onlyMobile">
+                              <div class="filterbuttons">
+                                <div class="filterbuttons__item">
+                                  <a href="" class='btn btn_bd'>Сбросить</a>
+                                </div><!-- /.filterbuttons__item -->
+                                <div class="filterbuttons__item">
+                                  <a href="" class='btn btn_main'>Показать</a>
+                                </div><!-- /.filterbuttons__item -->
+                              </div><!-- /.filterbuttons -->
+                            </div><!-- /.filter__buttons onlyMobile -->
                           </form>
                         </div>
                       </div>
@@ -503,10 +529,10 @@
                       <div class="catalogheader__left">
                         <div class="catalogheader__panel">
                           <div class="dropdownpanel">
-                            <div class="dropdownselect">
+                            <div class="dropdownselect ">
                               <div class="dropdown-select dropdown-select--type1">
                                 <div class="dropdown-select__title">
-                                  <span class='dropdown-caption'>
+                                  <span class='dropdown-caption onlyDesktop'>
                                     Сортировать:
                                     </span>
                                   <img src="img/Sorting.svg" alt="">
@@ -553,12 +579,7 @@
                             <!-- /.dropdownselect -->
                           </div>
                           <!-- /.dropdownpanel -->
-                          <div class="mobilefilter onlyMobile">
-                            <a href="#" class='btn_main btn_icon js-mobilefilter'>
-                            <img src="img/mobilefilter.svg" alt="">
-                            </a>
-                          </div>
-                          <!-- /.mobilefilter -->
+                          
                         </div>
                         <!-- /.catalogheader__panel -->
                       </div>
@@ -569,7 +590,7 @@
                             <div class="dropdown-select dropdown-select--border">
                               <div class="dropdown-select__title">
                                 <span class='dropdown-caption'>
-                                Показывать по:
+                                Показывать:
                                 </span>
                                 <span class='dropdown-value'>
                                 40
@@ -1521,8 +1542,7 @@
                     <!-- /.cataloglist -->
 
                     <div class="seoblock">
-                      <div class="container">
-                          <div class="aboutblock__title onlyDesktop">
+                          <div class="aboutblock__title ">
                             Мы добываем, перерабатываем и <br> доставляем 
                             <span class="red">лучшие морепродукты в <br> России</span><!-- /.red -->
                           </div><!-- /.aboutblock__title -->
@@ -1537,8 +1557,6 @@
                               <span>Узнать больше</span>
                             </a><!-- /.btn_border -->
                           </div><!-- /.aboutblock__link -->
-                      </div>
-                      <!-- /.container -->
                     </div>
                     <!-- /.seoblock -->
                   </div>
