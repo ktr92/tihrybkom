@@ -1146,7 +1146,7 @@ span.dcheckbox__text:before {
   --third-family: 'Klein'; }
 
 body {
-  min-width: 320px;
+  min-width: 375px;
   font-family: "Klein";
   font-style: normal;
   font-weight: normal;
@@ -1864,6 +1864,10 @@ h2 {
 .catalogmain__item {
   margin-bottom: 19px;
   width: calc((100% - 40px) / 3); }
+
+.catalogmain__items_col4 .catalogmain__item {
+  margin-bottom: 19px;
+  width: calc((100% - 60px) / 4); }
 
 .quantity {
   padding: 0 7px; }
@@ -2882,12 +2886,14 @@ a.burgermenu.active span:last-child {
   margin-right: 30px; }
 
 .catalogpage__wrapper {
-  margin-top: 54px;
   justify-content: space-between; }
 
 .catalogpage__main {
   width: 100%;
   max-width: 1258px; }
+
+.catalogpage {
+  margin-top: 54px; }
 
 .catalogaside__back a {
   display: block;
@@ -3324,6 +3330,9 @@ a:hover, button:hover {
 @media (max-width: 1279px) {
   .catalogmain__item {
     width: calc((100% - 40px) / 2); }
+  .catalogmain__items_col4 .catalogmain__item {
+    margin-bottom: 19px;
+    width: calc((100% - 40px) / 2); }
   .catalogmain__item .productcard__price {
     font-size: 18px; }
   .searchinput {
@@ -3736,7 +3745,7 @@ a:hover, button:hover {
       text-transform: uppercase;
       color: #fff;
       padding-left: 10px; }
-  .catalogpage__wrapper {
+  .catalogpage {
     margin-top: 20px; }
   .catalogpage__aside.active {
     display: block; }
@@ -3880,6 +3889,8 @@ a:hover, button:hover {
 
 @media (max-width: 767px) {
   .catalogmain__item {
+    width: 100%; }
+  .catalogmain__items_col4 .catalogmain__item {
     width: 100%; }
   .categoryblocks_page .categoryblocks__item {
     max-width: 100%;
