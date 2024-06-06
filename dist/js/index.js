@@ -6,12 +6,49 @@ function initFE() {
   newsSliderInit();
   lazyLoadSrc('img');
   lazyLoadSrc('iframe', 'https://www.youtube.com/embed/', '?rel=0&amp;amp;showinfo=0;amp;autoplay=0"');
+  detailsliderInit();
   closeByOutsideSelect()
   closeByClickOutside('.mainmenu', '.mainmenubtn')
   closeByClickOutside('.catalogpage__aside', '.js-mobilefilter')
+  
 };
 
+function detailsliderInit() {
+  const swiper = new Swiper(".detailswiperpreview", {
+      spaceBetween: 10,
+      scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+      },
+      slidesPerView: "auto",
+      mousewheel: true,
+      direction: 'vertical',
+      freeMode: true,
+      watchSlidesProgress: true,
 
+  });
+  const swiper2 = new Swiper(".detailswiper", {
+
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+          swiper: swiper,
+      },
+      pagination: {
+          el: ".detailslider-pagination",
+          clickable: true
+      },
+
+  });
+
+  $(function () {
+    $(".zoom-box").each(function () {
+      $(this).zoom()
+    })
+  })
+}
 
 function lazyLoadSrc(selector, prevalue = '', postvalue = '') {
   const callback = (entries, observer) => {
@@ -477,41 +514,7 @@ function videoPopup() {
   })
 }
 
-function detailsliderInit() {
-  const swiper = new Swiper(".detailswiperpreview", {
-    spaceBetween: 20,
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      draggable: true,
-    },
-    slidesPerView: "auto",
-    mousewheel: true,
-    freeMode: true,
-    watchSlidesProgress: true,
-  })
-  const swiper2 = new Swiper(".detailswiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-    pagination: {
-      el: ".detailslider-pagination",
-      clickable: true,
-    },
-    slidesPerView: 1,
 
-    effect: "fade"
-  })
-
-  $(function () {
-    $(".zoom-box").each(function () {
-      $(this).zoom()
-    })
-  })
-}
 
 function productSliderInit() {
   $("[data-slider='productslider']").each(function () {
