@@ -23,7 +23,11 @@ class Myslider {
     this.activeId = 0
     this.position = this.$slider.style.left
     this.slidesCount = this.slides.length
-
+    this.sectionCount = this.slidesCount
+    ? Math.ceil(this.slidesCount / this.slidesVisible)
+    : 1
+  this.responsive = settings.responsive ?? null
+  this.gap = settings.gap ?? 0
 
     if (this.settings.slideHeight) {
       // если задана высота
@@ -41,11 +45,7 @@ class Myslider {
       this.slideType = "count"
     }
 
-    this.sectionCount = this.slidesCount
-      ? Math.ceil(this.slidesCount / this.slidesVisible)
-      : 1
-    this.responsive = settings.responsive ?? null
-    this.gap = settings.gap ?? 0
+   
 
     // навигация
     this.$next = this.getFromRoot(this.settings.nextArrow)
@@ -72,7 +72,10 @@ class Myslider {
     this.slidesVisible = this.settings.slidesCount
     this.isCustomwidth = 0
     this.slideHeight = 0
-    this.slideWIdth = this.$container.offsetWidth / this.slidesVisible
+    this.slideWIdth = this.$container.offsetWidth / this.slidesVisible 
+    if (this.gap) {
+      this.slideWIdth -= this.gap
+    }
     this.isFixed = false
     this.slideStep = this.slideWIdth
   }

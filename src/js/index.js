@@ -125,6 +125,9 @@ function productSlider() {
 
   const slider = new Myslider("[data-myslider-wrapper='slider_products']", {
     slidesCount: 3,
+    gap: 20,
+    prevArrow: '[data-prev]',
+    nextArrow: '[data-next]',
     responsive: [
       {
         width: 992,
@@ -246,6 +249,12 @@ $(document).ready(function () {
     $('#header').toggleClass('active')
     $('[data-toggle="headersearch"]').toggleClass("active")
   })
+  $("[data-toggleclick='hiddentext']").on("click", function (e) {
+    e.preventDefault()
+    $(this).toggleClass("active")
+    $("[data-toggle='hiddentext']").slideToggle()
+    $('[data-toggle="hiddentext"]').toggleClass("active")
+  })
 
   $("[data-toggleclick='headersearch']").on("click", function (e) {
     e.preventDefault()
@@ -290,6 +299,10 @@ $(document).ready(function () {
     e.preventDefault()
     $(this).closest(".haederbanner").hide()
   })
+
+  $('.cardrating').each(function() {
+    $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 20.5);
+});
 
   $(".reviewsblock__rating").each(function () {
     $(this)
