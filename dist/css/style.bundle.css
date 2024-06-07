@@ -767,7 +767,7 @@ button.close:hover {
   font-size: 16px;
   line-height: 24px;
   /* identical to box height */
-  color: #25344F; }
+  color: #282828; }
 
 .textlogin {
   margin-top: 35px; }
@@ -814,26 +814,43 @@ button.close:hover {
   margin-left: auto;
   margin-right: auto; }
 
+.formrating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.modal textarea {
+  resize: none; }
+
+.modal .formrating {
+  margin-top: 40px;
+  cursor: pointer; }
+
+.modal .score-wrap {
+  width: 134px; }
+
+.modal .score .fa {
+  font-size: 26px; }
+
 .modalinfo__title {
-  font-family: 'FuturaDemiC';
-  font-style: normal;
-  font-weight: 600;
+  font-family: var(--second-family);
+  font-weight: 700;
   font-size: 26px;
   line-height: 100%;
-  /* or 26px */
   text-align: center;
-  margin-bottom: 25px;
-  color: #25344F; }
+  color: #282828;
+  margin-bottom: 19px;
+  color: #282828; }
 
 .modalinfo__text {
-  margin-bottom: 34px;
-  color: rgba(37, 52, 79, 0.6);
-  font-style: normal;
+  margin-bottom: 31px;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
-  /* or 16px */
-  max-width: 336px;
+  line-height: 110%;
+  text-align: center;
+  color: #282828;
+  max-width: 369px;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
@@ -880,7 +897,7 @@ button.close:hover {
   font-size: 14px;
   line-height: 100%;
   padding-left: 22px;
-  color: #25344F;
+  color: #282828;
   margin-bottom: 4px;
   background-image: url(../img/checklist.svg);
   background-position: left center;
@@ -930,11 +947,14 @@ button.close:hover {
   padding-left: 28px;
   position: relative; }
 
+.modal .formblock__input:last-child {
+  margin-bottom: 0; }
+
 .modal .check input[type='checkbox'] {
   display: none; }
 
 .modal .check label a {
-  color: #25344F;
+  color: #282828;
   text-decoration: underline; }
 
 .modal .check label a:hover {
@@ -982,6 +1002,16 @@ button.close:hover {
     width: 100%;
     height: 60px;
     line-height: 60px; }
+
+.modal .check.agree label, .modal .check.agree label a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  color: #282828; }
+
+.modal-submit + .formblock__check {
+  margin-top: 31px;
+  margin-bottom: 0; }
 
 @media only screen and (max-width: 1023px) {
   .pickuplist__addr {

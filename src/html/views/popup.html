@@ -10,14 +10,14 @@
 
   <div class="container">
     <a href="#popup_auth" data-toggle='modal' class="btn btn_main"> Авторизация</a>
-
-    <a href="#popup_callback" data-toggle='modal' class="btn btn_main"> Заказать звонок</a>
-    <a href="#popup_reg" data-toggle='modal' class="btn btn_main"> Регистрация</a>
-    <a href="#popup_password" data-toggle='modal' class="btn btn_main"> Восстановление пароля</a>
     <a href="#popup_sms" data-toggle='modal' class="btn btn_main">Вход по SMS</a>
-    <a href="#popup_reset" data-toggle='modal' class="btn btn_main">Сброс пароля</a>
-    <a href="#popup_email" data-toggle='modal' class="btn btn_main">Мы отправили письмо</a>
-    <a href="#popup_success" data-toggle='modal' class="btn btn_main">Пароль был успешно обновлен!</a>
+    <a href="#popup_password" data-toggle='modal' class="btn btn_main"> Восстановление пароля</a>
+    <a href="#popup_reg" data-toggle='modal' class="btn btn_main"> Регистрация</a>
+    <a href="#popup_callback" data-toggle='modal' class="btn btn_main"> Заказать звонок</a>
+    <a href="#popup_product" data-toggle='modal' class="btn btn_main">Сообщить о наличии</a>
+    <a href="#popup_success" data-toggle='modal' class="btn btn_main">Ваша заявка успешно принята</a>
+    <a href="#popup_fail" data-toggle='modal' class="btn btn_main">Чтото пошло не так </a>
+
     <a href="#popup_review" data-toggle='modal' class="btn btn_main">Оставить отзыв</a>
     <br>
     <br>
@@ -26,57 +26,7 @@
 </main>
 
 
-<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_callback'>
-  <div class="modal-dialog" role="document">
-    <div class="modalwrapper">
-      <div class="modal-content">
-        <div class="modal__header">
-          <div class="modal-title">Заказать звонок</div>
-          <div class="modal-subtitle">Наш оператор свяжется с Вами в течение нескольких минут</div>
-        </div>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <img src="img/closebutton.svg" alt="">
-          </span>
-        </button>
-        <div class="modal-body">
-          <form action="">
-            <div class="formblock">
-              <div class="formblock__main">
-                <div class="formblock__input">
-                  <label for="">Ваше имя</label>
-                  <input type="text" class='input-error' value='123'>
-                  <span class="input-errortext">Имя не может содержать символы: 123</span>
 
-                </div><!-- /.formblock__input -->
-                <div class="formblock__input">
-                  <label for="">Телефон</label>
-                  <input type="tel" placeholder='7 (___) ___-__-__'>
-                </div><!-- /.formblock__input -->
-              </div><!-- /.formblock__main -->
-              <div class="formblock__check">
-                <div class="check">
-                  <input type="checkbox" id="agree3" checked="checked" value="Y">
-                  <label for="agree3">Даю свое согласие на обработку персональных данных, соглашаюсь <a href=""> с политикой конфиденциальности</a> и принимаю <a href="">условия оферты</a>
-                  </label>
-                </div>
-              </div><!-- /.formblock__check -->
-              <div class="modal-submit modal-submit_small">
-                <div class="buttonsrow">
-                  <div class="buttonsrow__item buttonsrow__item_full">
-                    <button type='submit' class='btn btn_main'>Отправить</button>
-                  </div>
-                  <!-- /.buttonsrow__item -->
-                </div>
-                <!-- /.buttonsrow -->
-              </div>
-            </div><!-- /.formblock -->
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_auth'>
   <div class="modal-dialog" role="document">
     <div class="modalwrapper">
@@ -141,56 +91,6 @@
     </div>
   </div>
 </div>
-<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_password'>
-  <div class="modal-dialog" role="document">
-    <div class="modalwrapper">
-      <div class="modal-content">
-        <div class="modal__header">
-          <div class="modal-title">Восстановление пароля</div>
-
-        </div>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <img src="img/closebutton.svg" alt="">
-          </span>
-        </button>
-        <div class="modal-body">
-          <form action="">
-            <div class="formblock">
-              <div class="formblock__main">
-                <div class="formblock__input">
-                  <label for="">Email</label>
-                  <input type="text">
-                  <div class="textinput">Ссылка для смены пароля будет отправлена на указанную почту</div><!-- /.textinput -->
-                </div><!-- /.formblock__input -->
-                <div class="formblock__input formblock__input_center">
-                  <img src="img/captcha.png" alt="">
-                </div><!-- /.formblock__input -->
-                
-              </div><!-- /.formblock__main -->
-            
-              <div class="modal-submit modal-submit_small">
-                <div class="buttonsrow">
-                  <div class="buttonsrow__item buttonsrow__item_full">
-                    <button type='submit' class='btn btn_main'>Сбросить пароль</button>
-                  </div>
-                  <!-- /.buttonsrow__item -->
-                  <div class="buttonsrow__item buttonsrow__item_full">
-                    <a class='btn_border btn_gray red'>SMS-авторизация</a>
-
-                  </div>
-                  <!-- /.buttonsrow__item -->
-                </div>
-                <!-- /.buttonsrow -->
-              </div>
-              
-            </div><!-- /.formblock -->
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_sms'>
   <div class="modal-dialog" role="document">
@@ -211,7 +111,7 @@
               <div class="formblock__main formblock__main_small">
                 <div class="formblock__input">
                   <label for="">Ваш телефон</label>
-                  <input type="tel" placeholder='7 (___) ___-__-__'>
+                  <input type="tel" placeholder=''>
                 </div><!-- /.formblock__input -->
                
               </div><!-- /.formblock__main -->
@@ -238,46 +138,12 @@
     </div>
   </div>
 </div>
-
-<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_email'>
-  <div class="modal-dialog" role="document">
-    <div class="modalwrapper">
-      <div class="modal-content">
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <img src="img/closebutton.svg" alt="">
-          </span>
-        </button>
-        <div class="modal-body">
-             
-              <div class="modalinfo">
-                <div class="modalinfo__image"><img src="img/send.svg" alt=""></div><!-- /.modalinfo__image -->
-                <div class="modalinfo__title">Мы отправили письмо на <span class="red">*****llz@gmail.com</span></div><!-- /.modalinfo__title -->
-                <div class="modalinfo__text">Следуйте инструкциям в письме для продолжение процедуры сброса пароля</div><!-- /.modalinfo_-text -->
-              </div><!-- /.modalinfo -->
-              <div class="modal-submit modal-submit_small">
-                <div class="buttonsrow">
-                  <div class="buttonsrow__item buttonsrow__item_full">
-                    <button type='submit' class='btn btn_main'>Ок</button>
-                  </div>
-                  <!-- /.buttonsrow__item -->
-                 
-                </div>
-                <!-- /.buttonsrow -->
-              </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_reset'>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_password'>
   <div class="modal-dialog" role="document">
     <div class="modalwrapper">
       <div class="modal-content">
         <div class="modal__header">
-          <div class="modal-title">Сброс пароля</div>
+          <div class="modal-title">Восстановление пароля</div>
 
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -289,30 +155,20 @@
           <form action="">
             <div class="formblock">
               <div class="formblock__main">
-               
                 <div class="formblock__input">
-                  <label for="">Новый пароль</label>
-                  <div class="inputpassword">
-                    <input type="password" >
-                    <img src="img/Invisible.svg" alt="" data-toggle="password">
-                  </div><!-- /.inputpassword -->
+                  <label for="">Ваш телефон</label>
+                  <input type="tel">
                 </div><!-- /.formblock__input -->
-                <div class="formblock__input">
-                  <label for="">Повторите, пожалуйста</label>
-                  <div class="inputpassword">
-                    <input type="password" >
-                    <img src="img/Invisible.svg" alt="" data-toggle="password">
-                  </div><!-- /.inputpassword -->
-                </div><!-- /.formblock__input -->
+              
               </div><!-- /.formblock__main -->
-             
+            
               <div class="modal-submit modal-submit_small">
                 <div class="buttonsrow">
                   <div class="buttonsrow__item buttonsrow__item_full">
-                    <button type='submit' class='btn btn_main'>Обновить пароль</button>
+                    <button type='submit' class='btn btn_main'>Восстановить</button>
                   </div>
                   <!-- /.buttonsrow__item -->
-                 
+                  
                 </div>
                 <!-- /.buttonsrow -->
               </div>
@@ -325,50 +181,14 @@
   </div>
 </div>
 
-<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_success'>
-  <div class="modal-dialog" role="document">
-    <div class="modalwrapper">
-      <div class="modal-content">
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            <img src="img/closebutton.svg" alt="">
-          </span>
-        </button>
-        <div class="modal-body">
-             
-              <div class="modalinfo">
-                <div class="modalinfo__image"><img src="img/success.svg" alt=""></div><!-- /.modalinfo__image -->
-                <div class="modalinfo__title">Пароль был успешно обновлен!</div><!-- /.modalinfo__title -->
-                <div class="modalinfo__text">Теперь вы можете войти в вашую учетную запись.</div><!-- /.modalinfo_-text -->
-              </div><!-- /.modalinfo -->
-              <div class="modal-submit modal-submit_small">
-                <div class="buttonsrow">
-                  <div class="buttonsrow__item buttonsrow__item_full">
-                    <button type='submit' class='btn btn_main'>Войти</button>
-                  </div>
-                  <!-- /.buttonsrow__item -->
-                 
-                </div>
-                <!-- /.buttonsrow -->
-              </div>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal modal_large fade" tabindex="-1" role="dialog" id='popup_reg'>
+<div class="modal  fade" tabindex="-1" role="dialog" id='popup_reg'>
   <div class="modal-dialog" role="document">
     <div class="modalwrapper">
       <div class="modal-content">
         <div class="modal__header">
           <div class="modal-title">Регистрация</div>
-            <div class="textlogin flex content-between items-center">
-              <div class="textlogin__text">Уже есть учетная запись?</div>
-              <div class="textlogin__link"><a href="">Авторизируйтесь</a></div>
-            </div><!-- /.textlogin -->
+            
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">
@@ -376,11 +196,10 @@
           </span>
         </button>
         <div class="modal-body">
-          <div class="formblock__main formblock__main_cols">
+          <div class="formblock__main ">
             <div class="formblock__input">
-              <label for="">Ваше имя</label>
-              <input type="text" class='input-error' value='123'>
-              <span class="input-errortext">Имя не может содержать символы: 123</span>
+              <label for="">Имя</label>
+              <input type="text"  value=''>
 
             </div><!-- /.formblock__input -->
             <div class="formblock__input">
@@ -393,24 +212,11 @@
             </div><!-- /.formblock__input -->
             <div class="formblock__input">
               <label for="">Телефон</label>
-              <input type="tel" placeholder='7 (___) ___-__-__'>
+              <input type="tel" placeholder='''>
             </div><!-- /.formblock__input -->
-            <div class="formblock__input formblock__input__full">
-              <div class="informwrapper informwrapper_green">
-                <div class="informwrapper__title">Укажите почту и получите:</div>
-                <div class="informwrapper__list">
-                  <div class="checklist">
-                    <ul>
-                      <li>Скидку 15% на первый заказ от 1000 рублей.</li>
-                      <li>Участвие в розыгрышах и выигрыш промокодов.</li>
-                      <li>Уведомления о всех акциях, новинах и новостях.</li>
-                    </ul>
-                  </div><!-- /.checklist -->
-                </div><!-- /.informwrapper__list -->
-              </div><!-- /.informwrapper -->
-            </div><!-- /.formblock__input__full -->
+           
             <div class="formblock__input">
-              <label for="">Новый пароль</label>
+              <label for="">Пароль</label>
               <div class="inputpassword">
                 <input type="password" >
                 <img src="img/Invisible.svg" alt="" data-toggle="password">
@@ -429,7 +235,7 @@
                 <div class="buttonsrow xs-full">
                   <div class="buttonsrow__item ">
                     <div class="formblock__check">
-                      <div class="check">
+                      <div class="check agree">
                         <input type="checkbox" id="agree1" checked="checked" value="Y">
                         <label for="agree1">Даю свое согласие на обработку персональных данных, соглашаюсь <a href=""> с политикой конфиденциальности</a> и принимаю <a href="">условия оферты</a>
                         </label>
@@ -446,18 +252,23 @@
                 <!-- /.buttonsrow -->
               </div>
 
+              <div class="textlogin flex content-between items-center">
+                <div class="textlogin__text">Уже есть учетная запись?</div>
+                <div class="textlogin__link"><a href="">Авторизируйтесь</a></div>
+              </div><!-- /.textlogin -->
+
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_review'>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_callback'>
   <div class="modal-dialog" role="document">
     <div class="modalwrapper">
       <div class="modal-content">
         <div class="modal__header">
-          <div class="modal-title">Оставить отзыв</div>
+          <div class="modal-title">Заказать звонок</div>
         </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">
@@ -466,25 +277,192 @@
         </button>
         <div class="modal-body">
           <form action="">
-            <div class="accountname">
-              <div class="accountname__image">
-                <div class="accountname__img"><img src="img/accplh.svg" alt=""></div><!-- /.accountname__img -->
-              </div><!-- /.accountname__image -->
-              <div class="accountname__content">
-                <div class="accountname__label">от имени:</div><!-- /.accountname__label -->
-                <div class="accountname__name">Андрей Маринович</div><!-- /.accountname__name -->
-              </div><!-- /.accountname__content -->
-            </div><!-- /.accountname -->
             <div class="formblock">
               <div class="formblock__main">
                 <div class="formblock__input">
+                  <label for="">Имя</label>
+                  <input type="text" >
+
+                </div><!-- /.formblock__input -->
+                <div class="formblock__input">
+                  <label for="">Телефон</label>
+                  <input type="tel" placeholder=''>
+                </div><!-- /.formblock__input -->
+              </div><!-- /.formblock__main -->
+              <div class="modal-submit modal-submit_small">
+                <div class="buttonsrow">
+                  <div class="buttonsrow__item buttonsrow__item_full">
+                    <button type='submit' class='btn btn_main'>Отправить</button>
+                  </div>
+                  <!-- /.buttonsrow__item -->
+                </div>
+                <!-- /.buttonsrow -->
+              </div>
+              <div class="formblock__check">
+                <div class="check agree">
+                  <input type="checkbox" id="agree3" checked="checked" value="Y">
+                  <label for="agree3">Даю свое согласие на обработку персональных данных, соглашаюсь с <a href="">политикой конфиденциальности</a>
+                  </label>
+                </div>
+              </div><!-- /.formblock__check -->
+              
+            </div><!-- /.formblock -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_product'>
+  <div class="modal-dialog" role="document">
+    <div class="modalwrapper">
+      <div class="modal-content">
+        <div class="modal__header">
+          <div class="modal-title" style='text-align: left;'>Собщить о наличии Камчатский краб, комплект конечностей, 500г</div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+          <form action="">
+            <div class="formblock">
+              <div class="formblock__main">
+                <div class="formblock__input">
+                  <label for="">Имя</label>
+                  <input type="text" >
+
+                </div><!-- /.formblock__input -->
+                <div class="formblock__input">
+                  <label for="">Телефон</label>
+                  <input type="tel" placeholder=''>
+                </div><!-- /.formblock__input -->
+              </div><!-- /.formblock__main -->
+              <div class="modal-submit modal-submit_small">
+                <div class="buttonsrow">
+                  <div class="buttonsrow__item buttonsrow__item_full">
+                    <button type='submit' class='btn btn_main'>Отправить</button>
+                  </div>
+                  <!-- /.buttonsrow__item -->
+                </div>
+                <!-- /.buttonsrow -->
+              </div>
+              <div class="formblock__check">
+                <div class="check agree">
+                  <input type="checkbox" id="agree5" checked="checked" value="Y">
+                  <label for="agree5">Даю свое согласие на обработку персональных данных, соглашаюсь с <a href="">политикой конфиденциальности</a>
+                  </label>
+                </div>
+              </div><!-- /.formblock__check -->
+              
+            </div><!-- /.formblock -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_success'>
+  <div class="modal-dialog" role="document">
+    <div class="modalwrapper">
+      <div class="modal-content">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+             
+              <div class="modalinfo">
+                <div class="modalinfo__image"><img src="img/success.svg" alt=""></div><!-- /.modalinfo__image -->
+                <div class="modalinfo__title">Ваша заявка успешно принята</div><!-- /.modalinfo__title -->
+                <div class="modalinfo__text">Даю свое согласие на обработку персональных данных, соглашаюсь с политикой конфиденциальности</div><!-- /.modalinfo_-text -->
+              </div><!-- /.modalinfo -->
+              <div class="modal-submit modal-submit_small">
+                <div class="buttonsrow">
+                  <div class="buttonsrow__item buttonsrow__item_full">
+                    <button type='submit' class='btn btn_main' data-dismiss="nodal">Ок</button>
+                  </div>
+                  <!-- /.buttonsrow__item -->
+                 
+                </div>
+                <!-- /.buttonsrow -->
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_fail'>
+  <div class="modal-dialog" role="document">
+    <div class="modalwrapper">
+      <div class="modal-content">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+             
+              <div class="modalinfo">
+                <div class="modalinfo__image"><img src="img/fail.svg" alt=""></div><!-- /.modalinfo__image -->
+                <div class="modalinfo__title">Чтото пошло не так :’(</div><!-- /.modalinfo__title -->
+                <div class="modalinfo__text">Даю свое согласие на обработку персональных данных, соглашаюсь с политикой конфиденциальности</div><!-- /.modalinfo_-text -->
+              </div><!-- /.modalinfo -->
+              <div class="modal-submit modal-submit_small">
+                <div class="buttonsrow">
+                  <div class="buttonsrow__item buttonsrow__item_full">
+                    <button type='submit' class='btn btn_main' data-dismiss="nodal">Попробовать еще раз</button>
+                  </div>
+                  <!-- /.buttonsrow__item -->
+                 
+                </div>
+                <!-- /.buttonsrow -->
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal modal_small fade" tabindex="-1" role="dialog" id='popup_review'>
+  <div class="modal-dialog" role="document">
+    <div class="modalwrapper">
+      <div class="modal-content">
+        <div class="modal__header">
+          <div class="modal-title" style='text-align: left;'>Оставить отзыв</div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <img src="img/closebutton.svg" alt="">
+          </span>
+        </button>
+        <div class="modal-body">
+          <form action="">
+            
+            <div class="formblock">
+              <div class="formblock__main">
+                <div class="formblock__input">
+                  <label for="">Имя</label>
+                  <input type="text" >
+
+                </div><!-- /.formblock__input -->
+                <div class="formblock__input">
                   <label for="">Email</label>
-                  <input type="text" class='input-error' value='xolxllz@gmail.com'>
-                  <span class="input-errortext">Имя не может содержать символы: 123</span>
+                  <input type="text" >
                 </div><!-- /.formblock__input -->
                 <div class="formblock__input"> 
                   <label for="">Текст отзыва</label>
-                 <textarea name="" id="" cols="" rows="2"></textarea><!-- /# -->
+                 <textarea name="" id="" cols="" rows="4"></textarea><!-- /# -->
                 </div><!-- /.formblock__input -->
                 <div class="formblock__input">
                   <div class="formrating">
@@ -507,37 +485,30 @@
                         </span>
                       </div>
                     </span>
-                    <span class='formrating__value'>0</span>
                     <input type="hidden" name="formrating" value='0'>
 
                   </div>
                   <script>
                       $('.formrating .score-wrap').mousemove(function (e) {
                             if ($('.formrating input[name="formrating"]').val() === '0') {
-                                var stars = parseInt((e.pageX - $(this).offset().left) / 28) * 28 + 28;
+                                var stars = parseInt((e.pageX - $(this).offset().left) / 25) * 25 + 25;
                                 $(this).find('span.stars-active').css('width', stars);
                             }
 
                         });
 
                         $('.formrating .score-wrap').click(function (e) {
-                            var stars = parseInt((e.pageX - $(this).offset().left) / 28) + 1;
+                            var stars = parseInt((e.pageX - $(this).offset().left) / 25) + 1;
                             var $inp = $('.formrating input[name="formrating"]');
                             $inp.val(stars);
-                            $('.formrating span.stars-active').css('width', stars  * 28);
+                            $('.formrating span.stars-active').css('width', stars  * 25);
                             $('.formrating__value').html(stars);
                             // при нажатии на рейтинг 
                         });
                   </script>
                 </div><!-- /.formblock__input -->
               </div><!-- /.formblock__main -->
-              <div class="formblock__check">
-                <div class="check">
-                  <input type="checkbox" id="agree2" checked="checked" value="Y">
-                  <label for="agree2">Даю свое согласие на обработку персональных данных, соглашаюсь <a href=""> с политикой конфиденциальности</a> и принимаю <a href="">условия оферты</a>
-                  </label>
-                </div>
-              </div><!-- /.formblock__check -->
+              
               <div class="modal-submit modal-submit_small">
                 <div class="buttonsrow">
                   <div class="buttonsrow__item buttonsrow__item_full">
@@ -547,6 +518,13 @@
                 </div>
                 <!-- /.buttonsrow -->
               </div>
+              <div class="formblock__check">
+                <div class="check agree">
+                  <input type="checkbox" id="agree2" checked="checked" value="Y">
+                  <label for="agree2">Даю свое согласие на обработку персональных данных, соглашаюсь с <a href=""> политикой конфиденциальности</a></a>
+                  </label>
+                </div>
+              </div><!-- /.formblock__check -->
             </div><!-- /.formblock -->
           </form>
         </div>
