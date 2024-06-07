@@ -2755,7 +2755,7 @@ margin-left: auto;margin-right: auto;
 .detailslider .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2975,6 +2975,7 @@ color: #282828;
       -ms-flex-align: center;
       align-items: center;
       margin-bottom: 55px;
+      flex-wrap: wrap;
   }
   
   .imgcheckbox__icon {
@@ -3024,6 +3025,7 @@ color: #282828;
   }
   .detailbuy__checkbox {
     margin-right: 6px;
+    margin-bottom: 6px;
   }
   /* Create a custom checkbox */
   .imgcheckbox__content {
@@ -3768,4 +3770,8 @@ color: #282828;
 
   [data-next], [data-prev] {
     cursor: pointer;
+  }
+
+  .btn, .btn_border, .btn_white {
+    white-space: nowrap;
   }

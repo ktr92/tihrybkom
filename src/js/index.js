@@ -130,7 +130,7 @@ function productSlider() {
     nextArrow: '[data-next]',
     responsive: [
       {
-        width: 992,
+        width: 1023,
         slidesCount: 2
       },
       {
@@ -220,6 +220,14 @@ $(document).ready(function () {
     })
   }
  
+  $("a.scrollTo").click(function () {
+
+    var destination = $($(this).attr("href")).offset().top - 30;
+    $("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 1100);
+    return false;
+  });
 
   
   $(document).on('click', "[data-toggleclass]", (e) => {
