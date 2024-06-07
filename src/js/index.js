@@ -13,6 +13,7 @@ function initFE() {
   
 };
 
+
 function detailsliderInit() {
   const swiper = new Swiper(".detailswiperpreview", {
       spaceBetween: 10,
@@ -188,6 +189,21 @@ function dropdownInit() {
   })
 }
 $(document).ready(function () {
+
+  document.querySelectorAll('[data-toggle="password"]').forEach(item => {
+    item.addEventListener('click', event => {
+
+        let inp = item.previousElementSibling
+        if (inp.type === "password") {
+            inp.type = "text";
+        } else {
+            inp.type = "password";
+        }
+    })
+  })
+
+
+
 
   $('.js-mobilefilter').on('click', function(e) {
     e.preventDefault()
