@@ -1,0 +1,147 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header.html').default)(data) %>
+      <main>
+
+        <div class="pageheader"></div><!-- /.pageheader -->
+        <div class="pageheader_inside">
+          <div class="container">
+            <div class="pageheader__content">
+              <div class="breadcrumbs">
+                  <div class="breadcrumbs__items">
+                    <ul>
+                      <li><a href="/"><span><img src="img/Home.svg" alt=""></span></a></li>
+                      <li><a href="#"><span>Каталог</span></a></li>
+                      <li><span>Креветки</span></li>
+                    </ul>
+                  </div>
+                  <!-- /.breadcrumbs__items -->
+              </div><!-- /.breadcrumbs -->
+              <div class="pageheader__title">
+                <h1>Условия доставки</h1>
+              </div><!-- /.pageheader__title -->
+            </div><!-- /.pageheader__content -->
+          </div><!-- /.container -->
+        </div><!-- /.pageheader_inside -->    
+
+        <div class="contentblock">
+          <div class="container">
+            <div class="contentblock__wrapper">
+
+            <div class="contentblock__main">
+              <div class="contentblock__items">
+                <div class="contentblock__item">
+                  <div class="contentblock__title">В пределах мкад: <span class="red"> 350 <span class="rub">₽</span></span><!-- /.red --></div><!-- /.contentblock__title -->
+                  <div class="contentblock__list">
+                    <ul>
+                      <li>Минимальная сумма заказа от 2 000  ₽</li>
+                      <li>При заказе от 5 000 ₽ - <span class="green">бесплатно</span><!-- /.green --> </li>
+                    </ul>
+                  </div><!-- /.contentblock__list -->
+                </div><!-- /.contentblock__item -->
+                <div class="contentblock__item">
+                  <div class="contentblock__title">За мкад от 5 до 20 км: <span class="red">50 <span class="rub">₽</span>/км</span></div><!-- /.contentblock__title -->
+                  <div class="contentblock__list">
+                    <ul>
+                      <li>Минимальная сумма заказа от 5 000  ₽</li>
+                    </ul>
+                  </div><!-- /.contentblock__list -->
+                </div><!-- /.contentblock__item -->
+                <div class="contentblock__item">
+                  <div class="contentblock__title">За мкад от 20 до 50 км: <span class="red">50 <span class="rub">₽</span>/км</span></div><!-- /.contentblock__title -->
+                  <div class="contentblock__list">
+                    <ul>
+                      <li>Минимальная сумма заказа от 10 000  ₽</li>
+                    </ul>
+                  </div><!-- /.contentblock__list -->
+                </div><!-- /.contentblock__item -->
+              </div><!-- /.contentblock__items -->
+            </div><!-- /.contentblock__main -->
+            <div class="contentblock__image">
+              <img src="img/contentblock__image.png" alt="">
+            </div><!-- /.contentblock__image -->
+          </div><!-- /.contentblock__wrapper -->
+
+          </div><!-- /.container -->
+        </div><!-- /.contentblock -->
+
+        <div class="informblocks">
+          <div class="container">
+            <div class="informblocks__wrapper">
+              <div class="informblocks__title">
+                <h2>Варианты оплаты заказа</h2>
+              </div><!-- /.informblocks__title -->
+              <div class="informblocks__items">
+                <div class="informblocks__item">
+                  <div class="informitem">
+                    <div class="informitem__image">
+                      <img src="img/Cash.svg" alt="">
+                    </div><!-- /.informitem__image -->
+                    <div class="informitem__title">Наличными при получении</div><!-- /.informitem__title -->
+                    <div class="informitem__text">Оплатить покупку от физического лица наличными возможно в случае доставки заказа курьером либо со склада в Москве. Вместе с заказом вы получите кассовый и товарный чеки, содержащие все товарные позиции Вашего заказа</div><!-- /.informitem__text -->
+                  </div><!-- /.informitem -->
+                </div><!-- /.informblocks__item -->
+                <div class="informblocks__item">
+                  <div class="informitem">
+                    <div class="informitem__image">
+                      <img src="img/Magnetic.svg" alt="">
+                    </div><!-- /.informitem__image -->
+                    <div class="informitem__title">Банковской картой при получении</div><!-- /.informitem__title -->
+                    <div class="informitem__text">Оплатить покупку от физического лица банковской картой возможно в случае доставки заказа курьером (если курьер имеет при себе терминал для оплаты банковской картой) либо на складе, в котором предусмотрена такая возможность. Вместе с заказом Вы получите кассовый и товарный чеки, содержащие все товарные позиции Вашего заказа</div><!-- /.informitem__text -->
+                  </div><!-- /.informitem -->
+                </div><!-- /.informblocks__item -->
+                <div class="informblocks__item">
+                  <div class="informitem">
+                    <div class="informitem__image">
+                      <img src="img/Qrcode.svg" alt="">
+                    </div><!-- /.informitem__image -->
+                    <div class="informitem__title">Оплата по qr-коду</div><!-- /.informitem__title -->
+                    <div class="informitem__text">
+                      <ol>
+                        <li>Наведите камеру телефона на  QR-код, предоставленный курьером в момент получения заказа, и перейдите по ссылке</li>
+                        <li>подтвердите покупку в приложении Вашего банка.</li>
+                      </ol>
+                    </div><!-- /.informitem__text -->
+                  </div><!-- /.informitem -->
+                </div><!-- /.informblocks__item -->
+                <div class="informblocks__item">
+                  <div class="informitem">
+                    <div class="informitem__image">
+                      <img src="img/Web.svg" alt="">
+                    </div><!-- /.informitem__image -->
+                    <div class="informitem__title">Онлайн на сайте</div><!-- /.informitem__title -->
+                    <div class="informitem__text">Так же вы можете оплатить заказ сразу при оформлении заказа она сайте онлайн. Вы сразу получите кассовый и товарный чеки, содержащие все товарные позиции Вашего заказа</div><!-- /.informitem__text -->
+                  </div><!-- /.informitem -->
+                </div><!-- /.informblocks__item -->
+              </div><!-- /.informblocks__items -->
+            </div><!-- /.informblocks__wrapper -->
+          </div><!-- /.container -->
+        </div><!-- /.informblocks -->
+
+        <div class="returnblock">
+          <div class="container">
+            <div class="returnblock__wrapper">
+              <div class="returnblock__main">
+                <div class="returnblock__title">
+                  <h2>Условия <span class="red">возврата</span> денежных средств<!-- /.red --></h2>
+                </div><!-- /.returnblock__title -->
+                <div class="returnblock__text">
+                  <p>Для возврата денежных средств Вам нужно связаться с менеджером по телефону: <a href="tel:+74951111111" class="contact">+7 495 111 11 11</a><!-- /.contact --></p>
+                  <p>Срок рассмотрения заявки на возврат денежных средств составляет “10” дней (срок устанавливается магазином). Возврат денежных средств осуществляется на ту же банковскую карту, с которой производился платеж. Возврат денежных средств на карту осуществляется в срок от 5 до 30 банковских дней, в зависимости от Банка, которым была выпущена банковская карта</p>
+                </div><!-- /.returnblock__text -->
+              </div><!-- /.returnblock__main -->
+              <div class="returnblock__list">
+                <div class="returnblock__subtitle">Если вы обнаружили признаки некачественной продукции:</div><!-- /.returnblock__subtitle -->
+                <div class="numberlist">
+                  <ol>
+                    <li><span>Сообщите нам об этом, позвонив по номеру телефона: <a href="tel:+74951111111" class="contact">+7 495 111 11 11</a></span></li>
+                    <li><span>Менеджер свяжется с Вами и договорится о дате и времени прибытия курьера для обмена товара или возврата денежных средств</span></li>
+                  </ol>
+                </div><!-- /.numberlist -->
+              </div><!-- /.returnblock__list -->
+            </div><!-- /.returnblock__wrapper -->
+          </div><!-- /.container -->
+        </div><!-- /.returnblock -->
+        
+      </main>
+      <%= _.template(require('../includes/footer.html').default)(data) %>

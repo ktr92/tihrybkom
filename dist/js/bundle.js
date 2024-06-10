@@ -33,6 +33,7 @@ function initFE() {
   closeByOutsideSelect()
   closeByClickOutside('.mainmenu', '.mainmenubtn')
   closeByClickOutside('.catalogpage__aside', '.js-mobilefilter')
+  closeByClickOutside('.headermain__search', '[data-toggleclick="headersearch"]')
   
 };
 
@@ -128,6 +129,8 @@ function newsSliderInit() {
   const slider = new Myslider("[data-myslider-wrapper='slider_news']", {
     slideSize: 742,
     gap: 19,
+    prevArrow: '[data-prev]',
+    nextArrow: '[data-next]',
     responsive: [
       {
         width: 992,
@@ -172,6 +175,7 @@ function progressSliderInit() {
 
   const slider = new Myslider("[data-myslider-wrapper='slider_aboutblock']", {
     slideHeight: 711,
+    gap: 12,
     prevArrow: '[data-prev]',
     nextArrow: '[data-next]',
     progressBar: {

@@ -1,0 +1,43 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header.html').default)(data) %>
+      <main>
+
+        <div class="pageheader"></div><!-- /.pageheader -->
+        <div class="pageheader_inside">
+          <div class="container">
+            <div class="pageheader__content">
+              <div class="breadcrumbs">
+                  <div class="breadcrumbs__items">
+                    <ul>
+                      <li><a href="/"><span><img src="img/Home.svg" alt=""></span></a></li>
+                      <li><a href="#"><span>Каталог</span></a></li>
+                      <li><span>Креветки</span></li>
+                    </ul>
+                  </div>
+                  <!-- /.breadcrumbs__items -->
+              </div><!-- /.breadcrumbs -->
+            
+            </div><!-- /.pageheader__content -->
+          </div><!-- /.container -->
+        </div><!-- /.pageheader_inside -->    
+
+        <div class="infopage">
+          <div class="errorpage">
+            <div class="container">
+              <div class="errorpage__img">
+                <img src="img/404.svg" alt="">
+              </div><!-- /.errorpage__img -->
+              <div class="errorpage__title">Страница не найдена</div><!-- /.errorpage__title -->
+              <div class="errorpage__text">Упс! Возможно, вы ввели неправильный адрес или она была удалена.</div><!-- /.errorpage__text -->
+              <div class="errorpage__link">
+                <a href="#" class="btn_border">
+                  <span>Вернуться на главную</span>
+                </a>
+              </div><!-- /.errorpage__link -->
+            </div><!-- /.container -->
+          </div><!-- /.errorpage -->
+        </div><!-- /.infopage -->
+        
+      </main>
+      <%= _.template(require('../includes/footer.html').default)(data) %>

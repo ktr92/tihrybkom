@@ -96,6 +96,11 @@ class Myslider {
     this.slideWIdth = null
     this.isFixed = 1
     this.slideStep = []
+    if (this.gap) {
+      this.slides.forEach(item => {
+        item.style.marginRight = this.gap + 'px'
+      })
+    }
   }
 
   getFromRoot(selector) {
@@ -220,8 +225,8 @@ class Myslider {
         $slide.dataset.mysliderid = index
         $slide.dataset.width = $content.width
       }
-      this.$slider.style.width = `${totalWidth}px`
-      this.slideStep.push($slide.offsetWidth)
+      this.$slider.style.width = `${totalWidth}px` 
+      this.slideStep.push($slide.offsetWidth  + this.gap)
       index++
     })
   }

@@ -1,0 +1,52 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header.html').default)(data) %>
+      <main>
+
+        <div class="pageheader"></div><!-- /.pageheader -->
+        <div class="pageheader_inside">
+          <div class="container">
+            <div class="pageheader__content">
+              <div class="breadcrumbs">
+                  <div class="breadcrumbs__items">
+                    <ul>
+                      <li><a href="/"><span><img src="img/Home.svg" alt=""></span></a></li>
+                      <li><a href="#"><span>Каталог</span></a></li>
+                      <li><span>Креветки</span></li>
+                    </ul>
+                  </div>
+                  <!-- /.breadcrumbs__items -->
+              </div><!-- /.breadcrumbs -->
+            
+            </div><!-- /.pageheader__content -->
+          </div><!-- /.container -->
+        </div><!-- /.pageheader_inside -->    
+
+          <div class="confirmpage">
+            <div class="container">
+              <div class="confirmpage__wrapper">
+                <div class="confirmpage__bg">
+                <div class="confirmpage__content">
+                  <div class="confirmpage__title">Спасибо, Ваш заказ принят!</div><!-- /.confirmpage__title -->
+                  <div class="confirmpage__text">За статусом заказа вы можете следить в Вашем личном кабинете на сайте.</div><!-- /.confirmpage__text -->
+                  <div class="confirmpage__info">
+                    <div class="orderinfo">
+                      <div class="orderinfo__number">
+                        <div class="ordernumber">
+                          <div class="ordernumber__number">5941</div><!-- /.ordernumber__number -->
+                          <div class="ordernumber__text">номер вашего заказа</div><!-- /.ordernumber__text -->
+                        </div><!-- /.ordernumber -->
+                      </div><!-- /.orderinfo__number -->
+                      <div class="orderinfo__button">
+                        <a href="" class="btn btn_main">Перейти в личный кабинет</a><!-- /.btn btn_main -->
+                      </div><!-- /.orderinfo__button -->
+                    </div><!-- /.orderinfo -->
+                  </div><!-- /.confirmpage__info -->
+                </div><!-- /.confirmpage__content -->
+              </div><!-- /.confirmpage__wrapper -->
+            </div><!-- /.confirmpage__bg -->
+            </div><!-- /.container -->
+          </div><!-- /.confirmpage -->
+        
+      </main>
+      <%= _.template(require('../includes/footer.html').default)(data) %>
