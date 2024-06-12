@@ -48,12 +48,15 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="js/maskedinput.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
   <script src="js/selectbox.js"></script>
   <script src="js/filter.js"></script>
-  <script src="js/lightbox.min.js"></script><!-- 
+  <script src="js/lightbox.min.js"></script>
+    <script src="js/hover-slider.min.js"></script>
+<!-- 
   <script src="js/jquery.lazy.min.js"></script>
   <script src="js/jquery.lazy.youtube.min.js"></script> -->
   <script src="js/slider.js"></script>
@@ -159,7 +162,9 @@
               <div class="catalogmenu__item"><a href="">Моллюски</a></div><!-- /.catalogmenu__item -->
               <div class="catalogmenu__item"><a href="">Креветки</a></div><!-- /.catalogmenu__item -->
               <div class="catalogmenu__item"><a href="">БАды и рыбий жир</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="">Икра</a></div><!-- /.catalogmenu__item -->
               <div class="catalogmenu__item"><a href="">Морские гребешки</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="">Мясо краба</a></div><!-- /.catalogmenu__item -->
             </div><!-- /.catalogmenu__items -->
           </div><!-- /.catalogmenu -->
         </div><!-- /.popupmenu__catalog -->
@@ -662,36 +667,42 @@
                     <div class="reviews__items">
                       <div class="reviews__item">
                         <div class="reviews__info">
-                          <div class="reviews__name">Андрей М.</div>
-                          <div class="reviews__rating">
-                            <div class="cardrating cardrating_large">
-                              <div class="cardrating__item">
-                                <div class="cardrating__form">
-                                  <div class="cardrating__value">
-                                    <span>4</span>
-                                  </div>
-                                  <span class="score">
-                                    <div class="score-wrap">
-                                      <span class="rat-stars-active stars-active">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
-                                      <span class="stars-inactive">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
+                          <div class="reviews__left">
+                            <div class="reviews__name">Андрей М.</div>
+                            <div class="reviews__rating">
+                              <div class="cardrating cardrating_large">
+                                <div class="cardrating__item">
+                                  <div class="cardrating__form">
+                                    <div class="cardrating__value">
+                                      <span>4</span>
                                     </div>
-                                  </span>
+                                    <span class="score">
+                                      <div class="score-wrap">
+                                        <span class="rat-stars-active stars-active">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars-inactive">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                      </div>
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div><!-- /.reviews__left -->
+                          <div class="reviews__right">
+                            <div class="reviews__date">15.05.2024</div><!-- /.reviews__date -->
+                          </div><!-- /.reviews__right -->
+                         
                         </div>
                         <!-- /.reviews__info -->
                         <div class="reviews__main">
@@ -707,36 +718,42 @@
                       <!-- /.reviews__item -->
                       <div class="reviews__item">
                         <div class="reviews__info">
-                          <div class="reviews__name">Андрей М.</div>
-                          <div class="reviews__rating">
-                            <div class="cardrating cardrating_large">
-                              <div class="cardrating__item">
-                                <div class="cardrating__form">
-                                  <div class="cardrating__value">
-                                    <span>5</span>
-                                  </div>
-                                  <span class="score">
-                                    <div class="score-wrap">
-                                      <span class="rat-stars-active stars-active">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
-                                      <span class="stars-inactive">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
+                          <div class="reviews__left">
+                            <div class="reviews__name">Андрей М.</div>
+                            <div class="reviews__rating">
+                              <div class="cardrating cardrating_large">
+                                <div class="cardrating__item">
+                                  <div class="cardrating__form">
+                                    <div class="cardrating__value">
+                                      <span>4</span>
                                     </div>
-                                  </span>
+                                    <span class="score">
+                                      <div class="score-wrap">
+                                        <span class="rat-stars-active stars-active">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars-inactive">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                      </div>
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div><!-- /.reviews__left -->
+                          <div class="reviews__right">
+                            <div class="reviews__date">15.05.2024</div><!-- /.reviews__date -->
+                          </div><!-- /.reviews__right -->
+                         
                         </div>
                         <!-- /.reviews__info -->
                         <div class="reviews__main">
@@ -752,36 +769,42 @@
                       <!-- /.reviews__item -->
                       <div class="reviews__item">
                         <div class="reviews__info">
-                          <div class="reviews__name">Андрей М.</div>
-                          <div class="reviews__rating">
-                            <div class="cardrating cardrating_large">
-                              <div class="cardrating__item">
-                                <div class="cardrating__form">
-                                  <div class="cardrating__value">
-                                    <span>2</span>
-                                  </div>
-                                  <span class="score">
-                                    <div class="score-wrap">
-                                      <span class="rat-stars-active stars-active">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
-                                      <span class="stars-inactive">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
+                          <div class="reviews__left">
+                            <div class="reviews__name">Андрей М.</div>
+                            <div class="reviews__rating">
+                              <div class="cardrating cardrating_large">
+                                <div class="cardrating__item">
+                                  <div class="cardrating__form">
+                                    <div class="cardrating__value">
+                                      <span>4</span>
                                     </div>
-                                  </span>
+                                    <span class="score">
+                                      <div class="score-wrap">
+                                        <span class="rat-stars-active stars-active">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars-inactive">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                      </div>
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div><!-- /.reviews__left -->
+                          <div class="reviews__right">
+                            <div class="reviews__date">15.05.2024</div><!-- /.reviews__date -->
+                          </div><!-- /.reviews__right -->
+                         
                         </div>
                         <!-- /.reviews__info -->
                         <div class="reviews__main">
@@ -797,36 +820,42 @@
                       <!-- /.reviews__item -->
                       <div class="reviews__item">
                         <div class="reviews__info">
-                          <div class="reviews__name">Андрей М.</div>
-                          <div class="reviews__rating">
-                            <div class="cardrating cardrating_large">
-                              <div class="cardrating__item">
-                                <div class="cardrating__form">
-                                  <div class="cardrating__value">
-                                    <span>1</span>
-                                  </div>
-                                  <span class="score">
-                                    <div class="score-wrap">
-                                      <span class="rat-stars-active stars-active">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
-                                      <span class="stars-inactive">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                      </span>
+                          <div class="reviews__left">
+                            <div class="reviews__name">Андрей М.</div>
+                            <div class="reviews__rating">
+                              <div class="cardrating cardrating_large">
+                                <div class="cardrating__item">
+                                  <div class="cardrating__form">
+                                    <div class="cardrating__value">
+                                      <span>4</span>
                                     </div>
-                                  </span>
+                                    <span class="score">
+                                      <div class="score-wrap">
+                                        <span class="rat-stars-active stars-active">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars-inactive">
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                      </div>
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div><!-- /.reviews__left -->
+                          <div class="reviews__right">
+                            <div class="reviews__date">15.05.2024</div><!-- /.reviews__date -->
+                          </div><!-- /.reviews__right -->
+                         
                         </div>
                         <!-- /.reviews__info -->
                         <div class="reviews__main">

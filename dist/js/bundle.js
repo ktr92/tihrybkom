@@ -28,6 +28,8 @@ function initFE() {
   brandSliderInit();
   newsSliderInit();
   lazyLoadSrc('img');
+  cardImagesSlider();
+
   lazyLoadSrc('iframe', 'https://www.youtube.com/embed/', '?rel=0&amp;amp;showinfo=0;amp;autoplay=0"');
   detailsliderInit();
   closeByOutsideSelect()
@@ -176,6 +178,7 @@ function progressSliderInit() {
   const slider = new Myslider("[data-myslider-wrapper='slider_aboutblock']", {
     slideHeight: 711,
     gap: 12,
+    autoplay: 2000,
     prevArrow: '[data-prev]',
     nextArrow: '[data-next]',
     progressBar: {

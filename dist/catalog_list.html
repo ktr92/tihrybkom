@@ -48,12 +48,15 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="js/maskedinput.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
   <script src="js/selectbox.js"></script>
   <script src="js/filter.js"></script>
-  <script src="js/lightbox.min.js"></script><!-- 
+  <script src="js/lightbox.min.js"></script>
+    <script src="js/hover-slider.min.js"></script>
+<!-- 
   <script src="js/jquery.lazy.min.js"></script>
   <script src="js/jquery.lazy.youtube.min.js"></script> -->
   <script src="js/slider.js"></script>
@@ -159,7 +162,9 @@
               <div class="catalogmenu__item"><a href="">Моллюски</a></div><!-- /.catalogmenu__item -->
               <div class="catalogmenu__item"><a href="">Креветки</a></div><!-- /.catalogmenu__item -->
               <div class="catalogmenu__item"><a href="">БАды и рыбий жир</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="">Икра</a></div><!-- /.catalogmenu__item -->
               <div class="catalogmenu__item"><a href="">Морские гребешки</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="">Мясо краба</a></div><!-- /.catalogmenu__item -->
             </div><!-- /.catalogmenu__items -->
           </div><!-- /.catalogmenu -->
         </div><!-- /.popupmenu__catalog -->
@@ -317,8 +322,8 @@
                   <div class="breadcrumbs__items">
                     <ul>
                       <li><a href="/"><span><img src="img/Home.svg" alt=""></span></a></li>
-                      <li><a href="#"><span>Креветки</span></a></li>
-                      <li><span>Каталог</span></li>
+                      <li><a href="#"><span>Каталог</span></a></li>
+                      <li><span> Креветки</span></li>
                     </ul>
                   </div>
                   <!-- /.breadcrumbs__items -->
@@ -647,7 +652,15 @@
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
                               <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -719,8 +732,16 @@
                                 </div><!-- /.productcard__sticker -->
                                
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -790,8 +811,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -863,8 +892,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -936,8 +973,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -1009,8 +1054,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -1082,8 +1135,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -1155,8 +1216,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -1228,8 +1297,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -1301,8 +1378,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -1374,8 +1459,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">
@@ -1447,8 +1540,16 @@
                                   ХИТ
                                 </div><!-- /.productcard__sticker -->
                               </div><!-- /.productcard__stickers -->
-                              <div class="productcard__image">
-                                <a href="#"><img data-src="img/product1.jpg" alt=""></a></div><!-- /.productcard__image -->
+                               <div class="productcard__image">
+                                <a href="#" class="productcard__images onlyDesktop">
+                                  <div class="productcard__img">
+                                    <img src="img/product1.jpg" data-hover-slides="img/product2.jpg, img/product3.jpg" alt="">
+                                  </div>
+                                </a> 
+                                <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                                  <img src="img/product1.jpg">
+                                </a>
+                              </div>
                               <div class="productcard__main">
                                 <div class="productcard__header">
                                   <div class="productcard__title">

@@ -1099,11 +1099,12 @@ $rowgap4: $gap * 3;
 }
 .productcard__image {
   margin-bottom: 22px;
+
   a {
     display: block;
     position: relative;
-
-    @include imagecenter(69.655%);
+    height: 282px;
+  /*   @include imagecenter(69.655%); */
   }
 
   img {
@@ -1111,17 +1112,28 @@ $rowgap4: $gap * 3;
     transition: $transition;
   }
 
-  &:hover {
+  /* &:hover {
     img {
       transform: scale(1.1);
     }
+  } */
+}
+.cataloglist__slider  {
+  .productcard__image {
+    a {
+      @include imagecenter(69.655%);
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    } 
   }
 }
 .productcard__main {
 }
 .productcard__header {
   display: flex; 
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 14px;
 
@@ -1344,7 +1356,9 @@ svg path:first-child  {
     fill: $red;
   }
 }
-
+.headermain__tel a {
+  font-size: 20px;
+}
 .brandslist__wrapper {
 }
 .brandslist__slider {
@@ -1365,9 +1379,15 @@ main {
 .brandcard__wrapper {
 }
 .brandcard__image {
+  background-image: url(../img//brands.png);
+  background-size: cover;
   position: relative;
   margin-bottom: 33px;
-  @include imagecenter(66%)
+/*   @include imagecenter(66%) */
+height: 326px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .brandcard__title {
   margin-bottom: 23px;
@@ -2033,7 +2053,7 @@ text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
+  z-index: 1;
   text-align: center;
   background-color: #fff;
   color: #fff;
@@ -2058,13 +2078,16 @@ text-transform: uppercase;
   z-index: -1;
 pointer-events: none;
 }
+.videobutton:hover .video-link-classic {
+  transform: scale(.95) !important
+}
 
 .video-link-classic-overlay {
   content: '';
   position: absolute;
-  top: -8px;
+  top: -13px;
   bottom: 0;
-  left: -8px;
+  left: -13px;
   right: 0;
   border-radius: 50%;
   background-color: rgba(45, 44, 43, .2);
@@ -2072,14 +2095,14 @@ pointer-events: none;
   transform: scale(1);
   transition: .5s ease-out all;
   animation: videoLinkScale 1.8s ease-out infinite;
-  width: 116px;
-  height: 116px;
+  width: 126px;
+  height: 126px;
   border: 2px solid #E7D5B3;
   z-index: -1;
   pointer-events: none;
 }
 .videoblock__content {
-  padding-left: 96px;
+  margin-left: 96px;
 }
 .productcard__title  {
   margin-right: 60px;
@@ -3385,15 +3408,28 @@ padding: 0 0 29px 0;
   }
   .reviews__items {
   }
+  .reviews__left {
+    display: flex;
+    align-items: center;
+  }
   .reviews__item {
      padding: 34px 46px;
      background: #2d2c2c;
      margin-bottom: 10px;
   }
+  .reviews__date {
+    font-family: var(--font-family);
+font-weight: 700;
+font-size: 16px;
+line-height: 150%;
+text-align: right;
+color: #fff;
+  }
   .reviews__info {
       margin-bottom: 17px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
   }
   .reviews__name {
      margin-right: 24px;
@@ -3404,16 +3440,15 @@ padding: 0 0 29px 0;
      text-transform: uppercase;
      color: #fff;
   }
-  .reviews__date {
+/*   .reviews__date {
       
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
       line-height: 19px;
-     /* identical to box height */
       margin-bottom: 11px;
       color: rgba(37, 52, 79, 0.4) 
-  }
+  } */
   .reviews__rating {
       .rating__count {
           
@@ -4212,3 +4247,72 @@ span {display: block;font-weight: 400;
   }
 }
 
+.hover-slider-indicator {
+  position: absolute;
+  right: 10px;
+  top: auto;
+  bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.hover-slider-indicator-dot {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 2px;
+  width: 46px;
+  margin-left: 6px;
+  margin-right: 0; }
+
+.hover-slider-indicator-dot.active {
+  background-color: #fff;
+ }
+
+  .productcard__img {
+    height: 100%;
+  }
+
+  .seoabout {
+  }
+  .seoabout__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .seoabout__main {
+    max-width: 730px;
+  }
+  .seoabout__title {
+    font-family: var(--second-family);
+font-weight: 700;
+font-size: 26px;
+line-height: 100%;
+text-transform: uppercase;
+color: #282828;
+    margin-bottom: 26px;
+  }
+  .seoabout__text {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: rgba(40, 40, 40, 0.7);
+  }
+  .seoabout__image {
+    margin-left: 30px;
+    max-width: 839px;
+    min-width: 40%;
+  }
+
+  .aboutblock_page {
+    padding-top: 30px;
+  }
+  
+  .seoabout {
+    margin-bottom: 54px;
+  }

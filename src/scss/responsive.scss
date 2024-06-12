@@ -20,7 +20,7 @@
     margin-right: 10px;
   }
   .videoblock__content {
-    padding-left: 30px;
+    margin-left: 30px;
   }
   iframe {
     max-width: 100%;
@@ -156,7 +156,7 @@ line-height: 100%;
   }
   .videoblock__content {
     width: 100%;
-    padding-left: 0;
+    margin-left: 0;
   }
   .videoblock__text {
     font-size: 22px;
@@ -425,6 +425,7 @@ text-align: center;
 }
 .fitchescard__title {
   font-size: 18px;
+  max-width: 222px;
 }
 .fitchesblock {
   margin-bottom: 34px;
@@ -457,8 +458,16 @@ text-align: center;
 .brandslider__slide:nth-child(4) {
   margin-top: 0px;
 }
+.videoblock__statTitle {
+  width: 150px;
+}
+.fitchescard {
+  background-size: 123px;
+}
 .brandcard__image {
   margin-bottom: 20px;
+  height: 165px;
+  padding: 40px 40px;
 }
 .brandcard__title {
   margin-bottom: 14px;
@@ -515,10 +524,7 @@ text-align: center;
 .footer__right {
   order: -1;
 }
-.footercols__col {
-  width: 100%;
-  margin-bottom: 26px;
-}
+
 .footer {
   padding: 33px 0;
 }
@@ -651,6 +657,49 @@ font-size: 18px;
 }
 
 @media (max-width: 1023px) {
+  .reviews__left {
+    display: block;
+  }
+  .reviews__info {
+    align-items: flex-start;
+  }
+  .reviews__item {
+    padding: 17px 16px;
+  }
+  .reviews__name {
+    margin-bottom: 9px;
+    white-space: nowrap;
+    margin-right: 0;
+  }
+  .seoabout__wrapper {
+   flex-wrap: wrap;
+  }
+  .seoabout__main {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .seoabout__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .seoabout__text {
+font-size: 12px;
+  }
+  .seoabout__image {
+    margin-left: 0;
+    margin-bottom: 15px;
+    order: -1;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .aboutblock_page {
+    padding-top: 30px;
+  }
+  
+  .seoabout {
+    margin-bottom: 24px;
+  }
   
   .mobilefilter {
     margin-top: 22px;
@@ -841,7 +890,15 @@ font-size: 18px;
     .dropdown-value {
       min-width: unset;
     }
-
+    .footercols {
+      width: 100%;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      
+    }
+    .footer__center  {
+      max-width: 100%;
+    }
 }
 @media (max-width: 999px) {
   .informblocks__items {
@@ -859,6 +916,7 @@ font-size: 18px;
     max-width: 100%;
     margin-bottom: 30px;
   }
+ 
 }
 @media (max-width: 767px) {
   .catalogmain__item {
@@ -1326,4 +1384,15 @@ span {
     outline: 1px solid #ab3541;
   }
 }
+.footercols__col {
+
+  margin-bottom: 26px;
+}
+
+}
+
+@media (max-width: 600px) {
+  .footercols__col {
+    width: 100%;
+  }
 }

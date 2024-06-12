@@ -9,6 +9,7 @@ class Myslider {
     this.settings = settings
     this.$root = document.querySelector(selector)
     this.sliderID = this.$root.dataset.mysliderWrapper
+    this.autoplay = settings.autoplay
 
     this.$container = this.$root.querySelector(
       `[data-myslider-container='${this.sliderID}']`
@@ -192,9 +193,21 @@ class Myslider {
     this.activateSlide(0)
     this.sizeInit()
     this.initSwipe()
+    console.log(this)
+
+    if (this.autoplay) {
+      const $this = this
+
+      function autochange() {
+        $this.activateSlide($this.activeId + 1)
+      }
+      setInterval(autochange, $this.autoplay)
+    }
 
     this.$slider.classList.add("slider-active")
   }
+
+ 
 
   arrowsInit() {
     this.$next.addEventListener("click", () => {
