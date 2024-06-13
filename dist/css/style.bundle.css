@@ -2127,7 +2127,7 @@ a.burgermenu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100%; }
+  /*  min-height: 100%; */ }
 
 .fitchescard__title {
   font-family: var(--second-family);
@@ -5344,7 +5344,8 @@ a:hover, button:hover {
   .videoblock__statTitle {
     width: 150px; }
   .fitchescard {
-    background-size: 123px; }
+    background-size: 123px;
+    min-height: 136px; }
   .brandcard__image {
     margin-bottom: 20px;
     height: 165px;
