@@ -1,6 +1,14 @@
 
 
 @media (max-width: 1480px) {
+  .catalogpage__aside {
+    max-width: 260px;
+    min-width: 260px;
+    margin-right: 15px;
+  }
+  .filter {
+    padding: 20px 10px;
+  }
   .returnblock__list {
     padding-left: 30px;
     padding-right: 30px;
@@ -658,6 +666,9 @@ font-size: 18px;
 }
 
 @media (max-width: 1023px) {
+  .catalogaside  {
+    position: absolute;
+  }
   .reviews__left {
     display: block;
   }
@@ -1392,8 +1403,114 @@ span {
 
 }
 
+
+@media (max-width: 1630px) {
+  .catalogmain__items {
+    gap: 10px;
+  }
+  .catalogmain__item {
+    width: calc((100% - 20px) / 3)
+  }
+  .catalogcats__item a {
+    font-size: 16px;
+    padding-left: 17px;
+  }
+  .catalogaside__back a {
+    padding-left: 68px;
+    background-position: left 16px center
+  }
+  .productcard__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn_cart {
+    padding: 0 10px;
+  }
+  .productcard {
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+   }
+  
+}
+@media (max-width: 1280px) {
+  .indexblock {
+    min-height: 700px;
+  }
+  #video-bg {
+    height: 700px;
+  }
+  .catalogmain__item {
+    width: calc((100% - 10px) / 2)
+  }
+}
+
+@media (max-width: 992px) {
+  .indexblock {
+    min-height: 456px;
+  }
+  #video-bg {
+    height: 456px;
+  }
+}
+@media (max-width: 767px) {
+  .pageheader__title {
+    align-items: flex-end;
+  }
+  .pageheader__link  {
+    font-size: 12px;
+    padding-bottom: 6px;border-width: 2px;
+  }
+  .sitetabs__content {
+    margin-bottom: 5px;
+  }
+  .sitetabs {
+    .catalognav__pagination {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+
+      .reviewbutton {
+        width: 100%;
+        margin-top: 16px;
+  
+        .btn_main {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+.detailslider .detailswiper {
+
+  img {
+    width: 375px;
+    height: 269px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
+  .scrolltop__icon {
+    width: 40px;
+    height: 40px;
+  }
+ .productcard {
+  max-width: 400px;
+  margin: auto;
+ }
+ .catalogmain__item {
+  width: 100%;
+}
+.productcard__image a {
+  height: 246px;
+}
+}
 @media (max-width: 600px) {
   .footercols__col {
     width: 100%;
   }
+ 
 }

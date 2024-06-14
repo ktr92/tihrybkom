@@ -2,6 +2,12 @@
   <%= _.template(require('../includes/head.html').default)(data) %>
     <%= _.template(require('../includes/header.html').default)(data) %>
       <main>
+        <div id="video-bg">
+          <video class="video-bg_desktop" width="100%" height="auto" preload="auto" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" id="home_video">
+                  <source src="img/bg_video.mp4" type="video/mp4">
+              </video>
+            </div>
+      
         <div class="indexblock">
           <div class="container">
             <div class="indexblock__wrapper">
@@ -157,17 +163,17 @@
               </div><!-- /.videoblock__video -->
               <div class="videoblock__content">
                 <div class="videoblock__text">Вот так из года в год мы работаем над тем, чтобы доставить самые свежие и вкусные дикие морепродукты вам и вашим клиентам</div><!-- /.videoblock__text -->
-                <div class="videoblock__stats">
+                <div class="videoblock__stats stats">
                   <div class="videoblock__stat fadeInUpSmall wow" data-wow-delay=".15s">
-                    <div class="videoblock__statTitle">с 1993 г.</div><!-- /.videoblock__statTitle -->
+                    <div class="videoblock__statTitle stats__number">с <span data-value="1993">1993</span>&nbsp;г.</div><!-- /.videoblock__statTitle -->
                     <div class="videoblock__statText">На рынке <br> России</div><!-- /.videoblock__statText -->
                   </div><!-- /.videoblock__stat -->
                   <div class="videoblock__stat fadeInUpSmall wow" data-wow-delay=".3s">
-                    <div class="videoblock__statTitle">38 000 т.</div><!-- /.videoblock__statTitle -->
+                    <div class="videoblock__statTitle stats__number"><span data-value="38000">38000</span>&nbsp;т.</div><!-- /.videoblock__statTitle -->
                     <div class="videoblock__statText">Продукции  <br>в год</div><!-- /.videoblock__statText -->
                   </div><!-- /.videoblock__stat -->
                   <div class="videoblock__stat fadeInUpSmall wow" data-wow-delay=".45s">
-                    <div class="videoblock__statTitle">17</div><!-- /.videoblock__statTitle -->
+                    <div class="videoblock__statTitle stats__number"><span data-value="17">17</span></div><!-- /.videoblock__statTitle -->
                     <div class="videoblock__statText">Перерабатывающих <br> судов, траулеров</div><!-- /.videoblock__statText -->
                   </div><!-- /.videoblock__stat -->
                 </div><!-- /.videoblock__stats -->

@@ -218,7 +218,59 @@ function dropdownInit() {
     // $(`[data-toggleactive=${dropdown}]`).toggleClass("active")
   })
 }
+
+
 $(document).ready(function () {
+
+  $('[data-bg] [data-image]').on('mouseover', function() {
+    const img = $(this).attr('data-image')
+    $(this).closest('[data-bg]').css('background-image', `url(${img})`) 
+  })
+
+  $(window).scroll(function () {
+    if ($(".stats").length) {
+      var top_of_element = $(".stats").offset().top
+      var bottom_of_element =
+        $(".stats").offset().top + $(".stats").outerHeight()
+      var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight()
+      var top_of_screen = $(window).scrollTop()
+  
+      if (
+        bottom_of_screen > top_of_element &&
+        top_of_screen < bottom_of_element
+      ) {
+        statsStart()
+      }
+    }
+  })
+  var statsStart = (function () {
+    var executed = false
+    return function () {
+      if (!executed) {
+        executed = true
+        $(".stats__number span").each(function () {
+          $(this)
+            .prop("Counter", 0)
+            .animate(
+              {
+                Counter: $(this).text(),
+              },
+              {
+                duration: 2000,
+                easing: "swing",
+                step: function (now) {
+                  $(this).text(numberWithSpace(Math.ceil(now)))
+                },
+              }
+            )
+        })
+      }
+    }
+  })();
+  
+  function numberWithSpace(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }  
 
   document.querySelectorAll('[data-toggle="password"]').forEach(item => {
     item.addEventListener('click', event => {

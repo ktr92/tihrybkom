@@ -375,10 +375,12 @@ margin-top: 6px;
 }
 
 .indexblock {
-  background-image: url(../img/bg1.jpg);
+ /*  background-image: url(../img/bg1.jpg); */
+ background-color: 
+rgba(40, 40, 40, 0.48);
   background-size: cover;
   background-position: center;
-  min-height: 1023px;
+  min-height: 1129px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1846,9 +1848,9 @@ a.burgermenu.active span:last-child {
 
 .catalogmenu {
   padding-right: 120px;
-  background-image: url(../img/catalogmenu1.png);
+  /* background-image: url(../img/catalogmenu1.png); */
+  background-size: 242px;
   background-position: right top 60px;
-  background-repeat: no-repeat;
   background-repeat: no-repeat;
 }
 
@@ -2586,7 +2588,7 @@ button.productcard__addtocart {
   line-height: 1; }
 
 a:hover, button:hover {
-  opacity: 0.85;
+/*   opacity: 0.85; */
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
@@ -2813,7 +2815,15 @@ margin-left: auto;margin-right: auto;
 
 .detailslider .detailswiper {
   height: 553px;
-  width: 100%; }
+  width: 100%;
+  img {
+    width: 773px;
+    height: 553px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
 
 .detailslider .detailswiper img {
   /* width: 100%;
@@ -4316,3 +4326,82 @@ color: rgba(40, 40, 40, 0.7);
   .seoabout {
     margin-bottom: 54px;
   }
+
+  #video-bg {
+    height: 100%;
+    margin-top: 0;
+    max-height: 100%;
+    overflow: hidden;
+    right: 0;
+    z-index: 1;
+    z-index: -1;
+}
+
+#video-bg, #video-bg:after {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+#video-bg>video {
+  height: auto;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  width: auto;
+}
+
+#video-bg>video {
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  width: initial;
+  max-width: initial;
+  top: -9999px;
+  bottom: -9999px;
+  max-height: initial;
+}
+
+#video-bg:after {
+  content: "";
+  width: 100%;
+}
+
+.productcard__image {
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 406px;
+    height: 282px;
+  }
+}
+
+.reviewbutton {
+  .btn_main {
+    height: 56px;
+    line-height: 56px;
+    padding: 20px 40px;
+    font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+text-transform: uppercase;
+text-transform: uppercase;
+  }
+}
+.pageheader__title {
+  display: flex;
+  align-items: center;justify-content: space-between;
+}
+
+.pageheader__link {
+  font-family: var(--second-family);
+font-weight: 700;
+font-size: 18px;
+line-height: 100%;
+text-transform: uppercase;
+color: #fff;
+padding-bottom: 15px;
+border-bottom: 3px solid $red;
+}

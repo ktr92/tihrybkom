@@ -155,16 +155,16 @@
     <div class="container">
       <div class="popupmenu__wrapper">
         <div class="popupmenu__catalog">
-          <div class="catalogmenu">
+          <div class="catalogmenu" data-bg=''>
             <div class="catalogmenu__items">
-              <div class="catalogmenu__item"><a href="">Крабы</a></div><!-- /.catalogmenu__item -->
-              <div class="catalogmenu__item"><a href="">Рыба</a></div><!-- /.catalogmenu__item -->
-              <div class="catalogmenu__item"><a href="">Моллюски</a></div><!-- /.catalogmenu__item -->
-              <div class="catalogmenu__item"><a href="">Креветки</a></div><!-- /.catalogmenu__item -->
-              <div class="catalogmenu__item"><a href="">БАды и рыбий жир</a></div><!-- /.catalogmenu__item -->
-              <div class="catalogmenu__item"><a href="">Икра</a></div><!-- /.catalogmenu__item -->
-              <div class="catalogmenu__item"><a href="">Морские гребешки</a></div><!-- /.catalogmenu__item -->
-              <div class="catalogmenu__item"><a href="">Мясо краба</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/product1.jpg">Крабы</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/product2.jpg">Рыба</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/catalogmenu1.png">Моллюски</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/product1.jpg">Креветки</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/product2.jpg">БАды и рыбий жир</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/catalogmenu1.png">Икра</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/product1.jpg">Морские гребешки</a></div><!-- /.catalogmenu__item -->
+              <div class="catalogmenu__item"><a href="" data-image="img/product2.jpg">Мясо краба</a></div><!-- /.catalogmenu__item -->
             </div><!-- /.catalogmenu__items -->
           </div><!-- /.catalogmenu -->
         </div><!-- /.popupmenu__catalog -->
@@ -314,6 +314,12 @@
 </header>
 <!-- /#header.header -->
       <main>
+        <div id="video-bg">
+          <video class="video-bg_desktop" width="100%" height="auto" preload="auto" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" id="home_video">
+                  <source src="img/bg_video.mp4" type="video/mp4">
+              </video>
+            </div>
+      
         <div class="indexblock">
           <div class="container">
             <div class="indexblock__wrapper">
@@ -469,17 +475,17 @@
               </div><!-- /.videoblock__video -->
               <div class="videoblock__content">
                 <div class="videoblock__text">Вот так из года в год мы работаем над тем, чтобы доставить самые свежие и вкусные дикие морепродукты вам и вашим клиентам</div><!-- /.videoblock__text -->
-                <div class="videoblock__stats">
+                <div class="videoblock__stats stats">
                   <div class="videoblock__stat fadeInUpSmall wow" data-wow-delay=".15s">
-                    <div class="videoblock__statTitle">с 1993 г.</div><!-- /.videoblock__statTitle -->
+                    <div class="videoblock__statTitle stats__number">с <span data-value="1993">1993</span>&nbsp;г.</div><!-- /.videoblock__statTitle -->
                     <div class="videoblock__statText">На рынке <br> России</div><!-- /.videoblock__statText -->
                   </div><!-- /.videoblock__stat -->
                   <div class="videoblock__stat fadeInUpSmall wow" data-wow-delay=".3s">
-                    <div class="videoblock__statTitle">38 000 т.</div><!-- /.videoblock__statTitle -->
+                    <div class="videoblock__statTitle stats__number"><span data-value="38000">38000</span>&nbsp;т.</div><!-- /.videoblock__statTitle -->
                     <div class="videoblock__statText">Продукции  <br>в год</div><!-- /.videoblock__statText -->
                   </div><!-- /.videoblock__stat -->
                   <div class="videoblock__stat fadeInUpSmall wow" data-wow-delay=".45s">
-                    <div class="videoblock__statTitle">17</div><!-- /.videoblock__statTitle -->
+                    <div class="videoblock__statTitle stats__number"><span data-value="17">17</span></div><!-- /.videoblock__statTitle -->
                     <div class="videoblock__statText">Перерабатывающих <br> судов, траулеров</div><!-- /.videoblock__statText -->
                   </div><!-- /.videoblock__stat -->
                 </div><!-- /.videoblock__stats -->
