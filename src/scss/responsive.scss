@@ -1434,9 +1434,9 @@ span {
    }
   
 }
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .indexblock {
-    min-height: 700px;
+   height: 700px;
   }
   #video-bg {
     height: 700px;
@@ -1444,11 +1444,11 @@ span {
   .catalogmain__item {
     width: calc((100% - 10px) / 2)
   }
-}
+} */
 
 @media (max-width: 992px) {
   .indexblock {
-    min-height: 456px;
+    height: 456px;
   }
   #video-bg {
     height: 456px;

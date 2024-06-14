@@ -1685,10 +1685,8 @@ img {
 
 .indexblock {
   /*  background-image: url(../img/bg1.jpg); */
-  background-color: rgba(40, 40, 40, 0.48);
   background-size: cover;
   background-position: center;
-  min-height: 1129px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -5031,6 +5029,21 @@ a:hover, button:hover {
 .seoabout {
   margin-bottom: 54px; }
 
+.indexblock {
+  height: 1039px;
+  overflow: hidden;
+  position: relative; }
+
+.videomask {
+  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+  background-color: rgba(40, 40, 40, 0.48);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9; }
+
 #video-bg {
   height: 100%;
   margin-top: 0;
@@ -5045,15 +5058,18 @@ a:hover, button:hover {
   position: absolute;
   top: 0; }
 
-#video-bg > video {
+#video-bg video {
   height: auto;
   left: 0;
   min-height: 100%;
   min-width: 100%;
   top: 0;
-  width: auto; }
+  width: auto;
+  /*  max-width: unset;
+width: unset;
+height: 100%; */ }
 
-#video-bg > video {
+#video-bg video {
   position: absolute;
   left: -9999px;
   right: -9999px;
@@ -6129,17 +6145,20 @@ a:hover, button:hover {
     margin: auto;
     overflow: hidden; } }
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .indexblock {
-    min-height: 700px; }
+   height: 700px;
+  }
   #video-bg {
-    height: 700px; }
+    height: 700px;
+  }
   .catalogmain__item {
-    width: calc((100% - 10px) / 2); } }
-
+    width: calc((100% - 10px) / 2)
+  }
+} */
 @media (max-width: 992px) {
   .indexblock {
-    min-height: 456px; }
+    height: 456px; }
   #video-bg {
     height: 456px; } }
 

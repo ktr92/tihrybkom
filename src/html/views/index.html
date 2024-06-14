@@ -2,13 +2,15 @@
   <%= _.template(require('../includes/head.html').default)(data) %>
     <%= _.template(require('../includes/header.html').default)(data) %>
       <main>
-        <div id="video-bg">
-          <video class="video-bg_desktop" width="100%" height="auto" preload="auto" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" id="home_video">
-                  <source src="img/bg_video.mp4" type="video/mp4">
-              </video>
-            </div>
-      
+       
         <div class="indexblock">
+          <div id="video-bg">
+            <div class="videomask"></div><!-- /.videomak -->
+            <video class="video-bg_desktop" width="100%" height="auto" preload="auto" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" id="home_video">
+                    <source src="img/bg_video.mp4" type="video/mp4">
+                </video>
+              </div>
+            
           <div class="container">
             <div class="indexblock__wrapper">
               <div class="indexblock__title animated fadeInUpSmall" >
