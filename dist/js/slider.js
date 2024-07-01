@@ -256,9 +256,6 @@ class Myslider {
         if (size.width > window.innerWidth) {
           this.screen = size.width
           this.reInit(size)
-         
-
-        
         }
       })
     }
@@ -341,7 +338,7 @@ class Myslider {
         this.activeId = this.slidesCount - this.slidesVisible
       } else {
         if (n < limit) {
-          this.position = (this.slideWIdth + this.gap) * n
+          this.position = (this.slideWIdth ) * n
           this.$slider.style.left = -this.position + "px"
           this.activeId = n
         } else {
@@ -349,6 +346,7 @@ class Myslider {
           this.activeId = 0
         }
       }
+      console.log(this.position)
     } else {
       this.activateSlideCustom(n)
     }

@@ -4722,6 +4722,10 @@ color: #282828;
   width: calc(100% - 435px);
   padding-right: 70px;
 }
+.contentblock__cols {
+  margin-top: 10px;
+
+}
 .contentblock__info {
   margin: 0 0 27px 0;
   font-family: var(--font3);
@@ -4735,7 +4739,7 @@ opacity: 0.4;
   font-weight: 400;
   font-size: 18px;
   color: #282828;
-  margin: 37px 0 43px 0;
+  margin: 0 0 43px 0;
   line-height: 150%;
 }
 .contentblock__content {
