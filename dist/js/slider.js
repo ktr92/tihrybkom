@@ -12,13 +12,13 @@ class Myslider {
     this.autoplay = settings.autoplay
 
     this.$container = this.$root.querySelector(
-      `[data-myslider-container='${this.sliderID}']`
+      `[data-myslider-container]`
     )
     this.$slider = this.$root.querySelector(
-      `[data-myslider-slider='${this.sliderID}']`
+      `[data-myslider-slider]`
     )
     this.slides = this.$root.querySelectorAll(
-      `[data-myslider-slide='${this.sliderID}']`
+      `[data-myslider-slide]`
     )
     this.screen = window.screen.width
     this.activeId = 0
@@ -27,7 +27,9 @@ class Myslider {
     this.sectionCount = this.slidesCount
     ? Math.ceil(this.slidesCount / this.slidesVisible)
     : 1
-  this.responsive = settings.responsive ?? null
+
+    this.responsive = settings.responsive ?? null
+
   this.gap = settings.gap ?? 0
 
     if (this.settings.slideHeight) {
@@ -63,7 +65,8 @@ class Myslider {
         this.$total.innerHTML = this.slides.length
       }
     }
-    
+    console.log(this.$slider)
+
     this.dotsItems = null
     this.off = false
     this.sliderInit()
@@ -74,7 +77,7 @@ class Myslider {
     this.isCustomwidth = 0
     this.slideHeight = 0
     this.slideWIdth = this.$container.offsetWidth / this.slidesVisible 
-    if (this.gap) {
+    if (this.gap && this.settings.slidesCount > 1) {
       this.slideWIdth -= this.gap
     }
     this.isFixed = false
@@ -248,7 +251,7 @@ class Myslider {
     let index = 0
 
     if (
-      window.innerWidth < this.responsive[1].width &&
+      this.responsive && window.innerWidth < this.responsive[1].width &&
       this.responsive &&
       this.responsive.length
     ) {
@@ -338,15 +341,16 @@ class Myslider {
         this.activeId = this.slidesCount - this.slidesVisible
       } else {
         if (n < limit) {
-          this.position = (this.slideWIdth ) * n
+          this.position = (this.slideWIdth + this.gap / 2) * n
           this.$slider.style.left = -this.position + "px"
           this.activeId = n
+          console.log(this.position)
+
         } else {
           this.$slider.style.left = 0
           this.activeId = 0
         }
       }
-      console.log(this.position)
     } else {
       this.activateSlideCustom(n)
     }

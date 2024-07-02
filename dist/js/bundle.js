@@ -24,6 +24,7 @@ var __webpack_exports__ = {};
 
 function initFE() {
   productSlider();
+  recipeSlider();
   progressSliderInit();
   brandSliderInit();
   newsSliderInit();
@@ -167,6 +168,19 @@ function productSlider() {
         slidesCount: 0
       }
     ]
+  })
+}
+
+}
+function recipeSlider() {
+  if (document.querySelector("[data-myslider-wrapper='slider_recipes']")) {
+
+  const slider = new Myslider("[data-myslider-wrapper='slider_recipes']", {
+    slidesCount: 1,
+    gap: 19,
+    prevArrow: '[data-prev]',
+    nextArrow: '[data-next]',
+   
   })
 }
 

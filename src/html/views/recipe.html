@@ -3,28 +3,29 @@
     <%= _.template(require('../includes/header.html').default)(data) %>
       <main>
 
-        <div class="pageheader"></div><!-- /.pageheader -->
-        <div class="pageheader_inside">
-          <div class="container">
-            <div class="pageheader__content">
-              <div class="breadcrumbs">
-                <div class="breadcrumbs__items">
-                  <ul>
-                    <li><a href="/"><span><img src="img/Home.svg" alt=""></span></a></li>
-                    <li><a href="#"><span>Рецепты</span></a></li>
-                    <li><span>Рецепт</span></li>
-                  </ul>
-                </div>
-                <!-- /.breadcrumbs__items -->
-              </div><!-- /.breadcrumbs -->
-              <div class="pageheader__title">
-                <h1>сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</h1>
-              </div><!-- /.pageheader__title -->
-              <div class="contentblock__info">5 дней назад</div><!-- /.contentblock__info -->
+        <div class="pageheader"></div>
 
-            </div><!-- /.pageheader__content -->
-          </div><!-- /.container -->
-        </div><!-- /.pageheader_inside -->
+          <div class="pageheader_inside">
+            <div class="container">
+              <div class="pageheader__content">
+                <div class="breadcrumbs">
+                  <div class="breadcrumbs__items">
+                    <ul>
+                      <li><a href="/"><span><img src="img/Home.svg" alt=""></span></a></li>
+                      <li><a href="#"><span>Рецепты</span></a></li>
+                      <li><span>Рецепт</span></li>
+                    </ul>
+                  </div>
+                  <!-- /.breadcrumbs__items -->
+                </div><!-- /.breadcrumbs -->
+                <div class="pageheader__title">
+                  <h1>сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</h1>
+                </div><!-- /.pageheader__title -->
+                <div class="contentblock__info">5 дней назад</div><!-- /.contentblock__info -->
+
+              </div><!-- /.pageheader__content -->
+            </div><!-- /.container -->
+          </div><!-- /.pageheader_inside -->
 
         <div class="contentblock">
           <div class="container">
@@ -238,102 +239,100 @@
                   </div><!-- /.asidenews -->
                 </aside>
               </div><!-- /.contentblock__colsaside -->
-              
+
               <!-- Другие рецепты для мобильной версии по иному шаблону, как новости на главной -->
-              <div class="newsblock newsblock_inside onlyMobile" data-myslider-wrapper='slider_news'>
-                  <div class="newsblock__title">
-                    <div class="blocktitle">
-                      <h2>Рецепты</h2>
+              <div class="newsblock newsblock_inside onlyMobile" data-myslider-wrapper='slider_recipes'>
+                <div class="newsblock__title">
+                  <div class="blocktitle">
+                    <h2>Рецепты</h2>
 
-                      <div class="products__arrows">
-                        <div class="products__arrow myslider__left" data-prev='slider_news'>
-                          <svg width="69" height="27" viewBox="0 0 69 27" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M20.743 26.5497C20.5183 26.4071 20.3815 26.156 20.3815 25.8852V24.9979C16.9849 24.4634 15.0219 22.453 13.6309 20.0741C12.1879 17.6063 10.2679 15.2289 7.56383 14.3014C6.30867 13.8709 4.55029 13.5859 0 13.3333C4.55029 13.0807 6.30867 12.7958 7.56383 12.3653C10.2679 11.4378 12.1879 9.0604 13.6309 6.59258C15.0219 4.21363 16.9849 2.20322 20.3815 1.66875V0.781467C20.3815 0.510638 20.5184 0.259601 20.743 0.116947C20.9677 -0.0257071 21.2481 -0.0386767 21.484 0.0825715L26.0543 2.42629C26.5705 2.6918 26.5705 3.55846 26.0543 3.82397L21.484 6.16769C21.2481 6.28899 20.9677 6.27602 20.7431 6.13337C20.5184 5.99071 20.3815 5.73967 20.3815 5.46884V4.86156C17.5757 5.78243 16.2975 9.09249 15.7605 11.7719L60.1413 11.7711C60.79 9.90268 62.5135 8.64588 64.4297 8.64588C66.9499 8.64588 69 10.7486 69 13.3334C69 15.9182 66.9499 18.0208 64.4297 18.0208C62.5135 18.0208 60.79 16.764 60.1413 14.8956L15.7605 14.8948C16.2975 17.5742 17.5757 20.8842 20.3815 21.8051V21.1978C20.3815 20.927 20.5184 20.676 20.743 20.5333C20.9677 20.3906 21.2481 20.3777 21.4839 20.499L26.0542 22.8427C26.5705 23.1082 26.5705 23.9749 26.0542 24.2404L21.4839 26.5841C21.2481 26.7053 20.9677 26.6924 20.743 26.5497ZM66.7148 13.3333C66.7148 14.6257 65.6897 15.677 64.4296 15.677C63.1695 15.677 62.1445 14.6257 62.1445 13.3333C62.1445 12.0409 63.1695 10.9896 64.4297 10.9896C65.6897 10.9896 66.7148 12.0409 66.7148 13.3333Z"
-                              fill="#D9D9D9" />
-                          </svg>
+                    <div class="products__arrows">
+                      <div class="products__arrow myslider__left" data-prev=''>
+                        <svg width="69" height="27" viewBox="0 0 69 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.743 26.5497C20.5183 26.4071 20.3815 26.156 20.3815 25.8852V24.9979C16.9849 24.4634 15.0219 22.453 13.6309 20.0741C12.1879 17.6063 10.2679 15.2289 7.56383 14.3014C6.30867 13.8709 4.55029 13.5859 0 13.3333C4.55029 13.0807 6.30867 12.7958 7.56383 12.3653C10.2679 11.4378 12.1879 9.0604 13.6309 6.59258C15.0219 4.21363 16.9849 2.20322 20.3815 1.66875V0.781467C20.3815 0.510638 20.5184 0.259601 20.743 0.116947C20.9677 -0.0257071 21.2481 -0.0386767 21.484 0.0825715L26.0543 2.42629C26.5705 2.6918 26.5705 3.55846 26.0543 3.82397L21.484 6.16769C21.2481 6.28899 20.9677 6.27602 20.7431 6.13337C20.5184 5.99071 20.3815 5.73967 20.3815 5.46884V4.86156C17.5757 5.78243 16.2975 9.09249 15.7605 11.7719L60.1413 11.7711C60.79 9.90268 62.5135 8.64588 64.4297 8.64588C66.9499 8.64588 69 10.7486 69 13.3334C69 15.9182 66.9499 18.0208 64.4297 18.0208C62.5135 18.0208 60.79 16.764 60.1413 14.8956L15.7605 14.8948C16.2975 17.5742 17.5757 20.8842 20.3815 21.8051V21.1978C20.3815 20.927 20.5184 20.676 20.743 20.5333C20.9677 20.3906 21.2481 20.3777 21.4839 20.499L26.0542 22.8427C26.5705 23.1082 26.5705 23.9749 26.0542 24.2404L21.4839 26.5841C21.2481 26.7053 20.9677 26.6924 20.743 26.5497ZM66.7148 13.3333C66.7148 14.6257 65.6897 15.677 64.4296 15.677C63.1695 15.677 62.1445 14.6257 62.1445 13.3333C62.1445 12.0409 63.1695 10.9896 64.4297 10.9896C65.6897 10.9896 66.7148 12.0409 66.7148 13.3333Z"
+                            fill="#D9D9D9" />
+                        </svg>
 
-                        </div>
-                        <div class="products__arrow myslider__right" data-next='slider_news'>
-                          <svg style='transform: rotate(180deg);' width="69" height="27" viewBox="0 0 69 27" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M20.743 26.5497C20.5183 26.4071 20.3815 26.156 20.3815 25.8852V24.9979C16.9849 24.4634 15.0219 22.453 13.6309 20.0741C12.1879 17.6063 10.2679 15.2289 7.56383 14.3014C6.30867 13.8709 4.55029 13.5859 0 13.3333C4.55029 13.0807 6.30867 12.7958 7.56383 12.3653C10.2679 11.4378 12.1879 9.0604 13.6309 6.59258C15.0219 4.21363 16.9849 2.20322 20.3815 1.66875V0.781467C20.3815 0.510638 20.5184 0.259601 20.743 0.116947C20.9677 -0.0257071 21.2481 -0.0386767 21.484 0.0825715L26.0543 2.42629C26.5705 2.6918 26.5705 3.55846 26.0543 3.82397L21.484 6.16769C21.2481 6.28899 20.9677 6.27602 20.7431 6.13337C20.5184 5.99071 20.3815 5.73967 20.3815 5.46884V4.86156C17.5757 5.78243 16.2975 9.09249 15.7605 11.7719L60.1413 11.7711C60.79 9.90268 62.5135 8.64588 64.4297 8.64588C66.9499 8.64588 69 10.7486 69 13.3334C69 15.9182 66.9499 18.0208 64.4297 18.0208C62.5135 18.0208 60.79 16.764 60.1413 14.8956L15.7605 14.8948C16.2975 17.5742 17.5757 20.8842 20.3815 21.8051V21.1978C20.3815 20.927 20.5184 20.676 20.743 20.5333C20.9677 20.3906 21.2481 20.3777 21.4839 20.499L26.0542 22.8427C26.5705 23.1082 26.5705 23.9749 26.0542 24.2404L21.4839 26.5841C21.2481 26.7053 20.9677 26.6924 20.743 26.5497ZM66.7148 13.3333C66.7148 14.6257 65.6897 15.677 64.4296 15.677C63.1695 15.677 62.1445 14.6257 62.1445 13.3333C62.1445 12.0409 63.1695 10.9896 64.4297 10.9896C65.6897 10.9896 66.7148 12.0409 66.7148 13.3333Z"
-                              fill="#D9D9D9" />
-                          </svg>
-
-                        </div>
                       </div>
-                    </div><!-- /.blocktitle -->
-                  </div><!-- /.newsblock__title -->
-                  <div class="newsblock__wrapper">
-                    <div class="newsblock__conrainer" data-myslider-container='slider_news'
-                      data-myslider-full='slider_news'>
-                      <div class="newsblock__items" data-myslider-slider='slider_news'>
-                        <div class="newsblock__item "
-                          data-myslider-slide='slider_news'>
-                          <a href='#' class="newscard">
-                            <div class="newscard__wrapper">
-                              <div class="newscard__content">
-                                <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div><!-- /.newscard__title -->
-                                <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
-                              </div><!-- /.newscard__content -->
-                              <div class="newscard__image">
-                                <img data-src="img/newscard1.jpg" alt="">
-                              </div><!-- /.newscard__image -->
-                            </div><!-- /.newscard__wrapper -->
-                          </a><!-- /.newscard -->
-                        </div><!-- /.newsblock__item -->
+                      <div class="products__arrow myslider__right" data-next=''>
+                        <svg style='transform: rotate(180deg);' width="69" height="27" viewBox="0 0 69 27" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20.743 26.5497C20.5183 26.4071 20.3815 26.156 20.3815 25.8852V24.9979C16.9849 24.4634 15.0219 22.453 13.6309 20.0741C12.1879 17.6063 10.2679 15.2289 7.56383 14.3014C6.30867 13.8709 4.55029 13.5859 0 13.3333C4.55029 13.0807 6.30867 12.7958 7.56383 12.3653C10.2679 11.4378 12.1879 9.0604 13.6309 6.59258C15.0219 4.21363 16.9849 2.20322 20.3815 1.66875V0.781467C20.3815 0.510638 20.5184 0.259601 20.743 0.116947C20.9677 -0.0257071 21.2481 -0.0386767 21.484 0.0825715L26.0543 2.42629C26.5705 2.6918 26.5705 3.55846 26.0543 3.82397L21.484 6.16769C21.2481 6.28899 20.9677 6.27602 20.7431 6.13337C20.5184 5.99071 20.3815 5.73967 20.3815 5.46884V4.86156C17.5757 5.78243 16.2975 9.09249 15.7605 11.7719L60.1413 11.7711C60.79 9.90268 62.5135 8.64588 64.4297 8.64588C66.9499 8.64588 69 10.7486 69 13.3334C69 15.9182 66.9499 18.0208 64.4297 18.0208C62.5135 18.0208 60.79 16.764 60.1413 14.8956L15.7605 14.8948C16.2975 17.5742 17.5757 20.8842 20.3815 21.8051V21.1978C20.3815 20.927 20.5184 20.676 20.743 20.5333C20.9677 20.3906 21.2481 20.3777 21.4839 20.499L26.0542 22.8427C26.5705 23.1082 26.5705 23.9749 26.0542 24.2404L21.4839 26.5841C21.2481 26.7053 20.9677 26.6924 20.743 26.5497ZM66.7148 13.3333C66.7148 14.6257 65.6897 15.677 64.4296 15.677C63.1695 15.677 62.1445 14.6257 62.1445 13.3333C62.1445 12.0409 63.1695 10.9896 64.4297 10.9896C65.6897 10.9896 66.7148 12.0409 66.7148 13.3333Z"
+                            fill="#D9D9D9" />
+                        </svg>
 
-                        <div class="newsblock__item "
-                          data-myslider-slide='slider_news'>
-                          <a href='#' class="newscard">
-                            <div class="newscard__wrapper">
-                              <div class="newscard__content">
-                                <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div><!-- /.newscard__title -->
-                                <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
-                              </div><!-- /.newscard__content -->
-                              <div class="newscard__image">
-                                <img data-src="img/newscard2.jpg" alt="">
-                              </div><!-- /.newscard__image -->
-                            </div><!-- /.newscard__wrapper -->
-                          </a><!-- /.newscard -->
-                        </div><!-- /.newsblock__item -->
-                        <div class="newsblock__item "
-                          data-myslider-slide='slider_news'>
-                          <a href='#' class="newscard">
-                            <div class="newscard__wrapper">
-                              <div class="newscard__content">
-                                <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div><!-- /.newscard__title -->
-                                <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
-                              </div><!-- /.newscard__content -->
-                              <div class="newscard__image">
-                                <img data-src="img/newscard1.jpg" alt="">
-                              </div><!-- /.newscard__image -->
-                            </div><!-- /.newscard__wrapper -->
-                          </a><!-- /.newscard -->
-                        </div><!-- /.newsblock__item -->
-                        <div class="newsblock__item "
-                          data-myslider-slide='slider_news'>
-                          <a href='#' class="newscard">
-                            <div class="newscard__wrapper">
-                              <div class="newscard__content">
-                                <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div><!-- /.newscard__title -->
-                                <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
-                              </div><!-- /.newscard__content -->
-                              <div class="newscard__image">
-                                <img data-src="img/newscard2.jpg" alt="">
-                              </div><!-- /.newscard__image -->
-                            </div><!-- /.newscard__wrapper -->
-                          </a><!-- /.newscard -->
-                        </div><!-- /.newsblock__item -->
-                      </div><!-- /.newsblock__items -->
-                    </div><!-- /.newsblock__conrainer -->
-                  </div><!-- /.newsblock__wrapper -->
-                </div><!-- /.container -->
-              </div><!-- /.newsblock -->
-            </div><!-- /.contentblock__cols -->
+                      </div>
+                    </div>
+                  </div><!-- /.blocktitle -->
+                </div><!-- /.newsblock__title -->
+                <div class="newsblock__wrapper">
+                  <div class="newsblock__conrainer" data-myslider-container='' data-myslider-full=''>
+                    <div class="newsblock__items" data-myslider-slider=''>
+                      <div class="newsblock__item " data-myslider-slide=''>
+                        <a href='#' class="newscard">
+                          <div class="newscard__wrapper">
+                            <div class="newscard__content">
+                              <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div>
+                              <!-- /.newscard__title -->
+                              <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
+                            </div><!-- /.newscard__content -->
+                            <div class="newscard__image">
+                              <img data-src="img/newscard1.jpg" alt="">
+                            </div><!-- /.newscard__image -->
+                          </div><!-- /.newscard__wrapper -->
+                        </a><!-- /.newscard -->
+                      </div><!-- /.newsblock__item -->
+
+                      <div class="newsblock__item " data-myslider-slide=''>
+                        <a href='#' class="newscard">
+                          <div class="newscard__wrapper">
+                            <div class="newscard__content">
+                              <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div>
+                              <!-- /.newscard__title -->
+                              <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
+                            </div><!-- /.newscard__content -->
+                            <div class="newscard__image">
+                              <img data-src="img/newscard2.jpg" alt="">
+                            </div><!-- /.newscard__image -->
+                          </div><!-- /.newscard__wrapper -->
+                        </a><!-- /.newscard -->
+                      </div><!-- /.newsblock__item -->
+                      <div class="newsblock__item " data-myslider-slide=''>
+                        <a href='#' class="newscard">
+                          <div class="newscard__wrapper">
+                            <div class="newscard__content">
+                              <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div>
+                              <!-- /.newscard__title -->
+                              <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
+                            </div><!-- /.newscard__content -->
+                            <div class="newscard__image">
+                              <img data-src="img/newscard1.jpg" alt="">
+                            </div><!-- /.newscard__image -->
+                          </div><!-- /.newscard__wrapper -->
+                        </a><!-- /.newscard -->
+                      </div><!-- /.newsblock__item -->
+                      <div class="newsblock__item " data-myslider-slide=''>
+                        <a href='#' class="newscard">
+                          <div class="newscard__wrapper">
+                            <div class="newscard__content">
+                              <div class="newscard__title">сТЕЙК ИЗ ЛОСОСЯ ПОД СЛИВОЧНЫМ СОУСОМ</div>
+                              <!-- /.newscard__title -->
+                              <div class="newscard__date">01.04.2024</div><!-- /.newscard__date -->
+                            </div><!-- /.newscard__content -->
+                            <div class="newscard__image">
+                              <img data-src="img/newscard2.jpg" alt="">
+                            </div><!-- /.newscard__image -->
+                          </div><!-- /.newscard__wrapper -->
+                        </a><!-- /.newscard -->
+                      </div><!-- /.newsblock__item -->
+                    </div><!-- /.newsblock__items -->
+                  </div><!-- /.newsblock__conrainer -->
+                </div><!-- /.newsblock__wrapper -->
+              </div><!-- /.container -->
+            </div><!-- /.newsblock -->
+          </div><!-- /.contentblock__cols -->
         </div><!-- /.contentblock -->
 
 
