@@ -5470,6 +5470,9 @@ iframe {
 .newsblock {
   width: 100%; }
 
+.cataloglist__slider .productcard {
+  max-width: 100%; }
+
 @media (max-width: 1480px) {
   .catalogpage__aside {
     max-width: 260px;

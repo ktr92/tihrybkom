@@ -30,25 +30,10 @@ class Myslider {
 
     this.responsive = settings.responsive ?? null
 
-  this.gap = settings.gap ?? 0
+    this.gap = settings.gap ?? 0
 
-    if (this.settings.slideHeight) {
-      // если задана высота
-      this.initByHeight()
-      this.slideType = "height"
-
-    } else if (this.settings.slideSize) {
-      // если задана ширина
-      this.initByWidth()
-      this.slideType = "width"
-
-    } else if (this.settings.slidesCount) {
-      // если задано количество слайдов
-      this.initByCount()
-      this.slideType = "count"
-    }
-
-   
+    
+    this.init()
 
     // навигация
     this.$next = this.getFromRoot(this.settings.nextArrow)
@@ -70,6 +55,25 @@ class Myslider {
     this.dotsItems = null
     this.off = false
     this.sliderInit()
+  }
+
+  init() {
+    if (this.settings.slideHeight) {
+      // если задана высота
+      this.initByHeight()
+      this.slideType = "height"
+
+    } else if (this.settings.slideSize) {
+      // если задана ширина
+      this.initByWidth()
+      this.slideType = "width"
+
+    } else if (this.settings.slidesCount) {
+      // если задано количество слайдов
+      this.initByCount()
+      this.slideType = "count"
+    }
+
   }
 
   initByCount() {
@@ -175,10 +179,15 @@ class Myslider {
     }
   }
 
+
+
   sliderInit() {
+
     window.addEventListener("resize", () => {
-      this.activateSlide(0)
+      this.initByCount()
+
       this.sizeInit()
+      this.activateSlide(0)
     })
 
     if (this.$next && this.$prev) {
@@ -261,7 +270,7 @@ class Myslider {
           this.reInit(size)
         }
       })
-    }
+    } 
 
     if (this.slideHeight) {
       this.sizeInitCustom()
